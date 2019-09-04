@@ -3,6 +3,7 @@ from tkinter import messagebox
 import math
 from PIL import Image, ImageTk
 import numpy
+import winsound
 
 #----Basic per inicar programa----
 
@@ -106,6 +107,7 @@ vari.set(15)
 varia=vari.get()
 
 def change_dropdown(*args):
+	winsound.PlaySound("Sons\\Botò", winsound.SND_FILENAME)
 	idioma_elegit=idioma.get()
 	funcions_elegides=funcions_h.get()
 	if(idioma_elegit=="Català"):
@@ -1397,6 +1399,7 @@ def quadrat_h_full():
 	root.false2=True
 
 def click(event):
+	winsound.PlaySound("Sons\\Clic", winsound.SND_FILENAME)
 	x = event.x_root - disc.winfo_rootx() 
 	y = event.y_root - disc.winfo_rooty()
 	root.counter+=1
@@ -1433,6 +1436,7 @@ disc.bind("<Button-1>", click)
 #----Assignar funcions a cada botó----
 
 def a_h():
+	winsound.PlaySound("Sons\\Botò", winsound.SND_FILENAME)
 	funcions_elegides=funcions_h.get()
 	if(funcions_elegides=="Funcions 1"):
 		recta_h()
@@ -1440,6 +1444,7 @@ def a_h():
 		triangle_h()
 
 def b_h():
+	winsound.PlaySound("Sons\\Botò", winsound.SND_FILENAME)
 	funcions_elegides=funcions_h.get()
 	if(funcions_elegides=="Funcions 1"):
 		semirecta_h()
@@ -1447,6 +1452,7 @@ def b_h():
 		triangle_h_full()
 
 def c_h():
+	winsound.PlaySound("Sons\\Botò", winsound.SND_FILENAME)
 	funcions_elegides=funcions_h.get()
 	if(funcions_elegides=="Funcions 1"):
 		segment_h()
@@ -1454,6 +1460,7 @@ def c_h():
 		segment_h_full()
 
 def d_h():
+	winsound.PlaySound("Sons\\Botò", winsound.SND_FILENAME)
 	funcions_elegides=funcions_h.get()
 	if(funcions_elegides=="Funcions 1"):
 		cercle_h()
@@ -1461,6 +1468,7 @@ def d_h():
 		abs_x()
 
 def e_h():
+	winsound.PlaySound("Sons\\Botò", winsound.SND_FILENAME)
 	funcions_elegides=funcions_h.get()
 	if(funcions_elegides=="Funcions 1"):
 		cercle_2_h()
@@ -1468,6 +1476,7 @@ def e_h():
 		quadrat_h()
 
 def f_h():
+	winsound.PlaySound("Sons\\Botò", winsound.SND_FILENAME)
 	funcions_elegides=funcions_h.get()
 	if(funcions_elegides=="Funcions 1"):
 		cercle_h_full()
@@ -1475,6 +1484,7 @@ def f_h():
 		quadrat_h_full()
 
 def g_h():
+	winsound.PlaySound("Sons\\Botò", winsound.SND_FILENAME)
 	funcions_elegides=funcions_h.get()
 	if(funcions_elegides=="Funcions 1"):
 		eliminar()
@@ -1482,6 +1492,7 @@ def g_h():
 		eliminar_resultats()
 
 def h_h():
+	winsound.PlaySound("Sons\\Botò", winsound.SND_FILENAME)
 	funcions_elegides=funcions_h.get()
 	if(funcions_elegides=="Funcions 1"):
 		info()
@@ -1518,5 +1529,3 @@ botó_info.grid(row=1, column=8)
 
 disc.pack()
 root.mainloop()
-root2.mainloop()
-root3.mainloop()

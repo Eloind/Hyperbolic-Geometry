@@ -928,7 +928,7 @@ def distancia_h(print_d,cercle):
 		else:
 			distancia=(escrit2+"∞")
 	if(print_d==True):
-		label_distancia=Label(root2,text=distancia, width=40)
+		label_distancia=Label(root2,text=distancia, width=50)
 		label_distancia.pack(expand=1)
 	return distancia_hiperbolica
 
@@ -1073,10 +1073,10 @@ def area_h(print_d):
 			text_b="Der Winkel B ist: "+str(B*180/math.pi)
 			text_c="Der Winkel C ist: "+str(C*180/math.pi)
 			text_d="Das Gebiet ist: "+area
-		label_angle_a=Label(root2, text=text_a, width=40)
-		label_angle_b=Label(root2, text=text_b, width=40)
-		label_angle_c=Label(root2, text=text_c, width=40)
-		label_area=Label(root2, text=text_d, width=40)
+		label_angle_a=Label(root2, text=text_a, width=50)
+		label_angle_b=Label(root2, text=text_b, width=50)
+		label_angle_c=Label(root2, text=text_c, width=50)
+		label_area=Label(root2, text=text_d, width=50)
 		label_angle_a.pack(expand=1)
 		label_angle_b.pack(expand=1)
 		label_angle_c.pack(expand=1)
@@ -1148,7 +1148,7 @@ def perimetre_cercle():
 		text_peri="The circumference is: "+str(perimetre)
 	elif(idioma_elegit=="Deutsch"):
 		text_peri="Der Umfang ist: "+str(perimetre)
-	label_peri=Label(root2, text=text_peri, width=40)
+	label_peri=Label(root2, text=text_peri, width=50)
 	label_peri.pack(expand=1)
 
 def area_cercle():
@@ -1164,7 +1164,7 @@ def area_cercle():
  		text_a_c="The area is: "+str(area)
 	elif(idioma_elegit=="Deutsch"):
  		text_a_c="Das Gebiet ist: "+str(area)
-	label_a_c=Label(root2, text=text_a_c, width=40)
+	label_a_c=Label(root2, text=text_a_c, width=50)
 	label_a_c.pack(expand=1)
 
 def cercle_h_full():
@@ -1438,17 +1438,17 @@ def quadrat_h_full():
 		text_c="El angulo C es: "+str(C*180/math.pi)
 		text_d="El angulo D es: "+str(D*180/math.pi)
 		text_e="El area es: "+area_t
-	elif(idioma_elegit=="English"):
+	elif(idioma_elegit=="Deutsch"):
 		text_a="The angle A is: "+str(A*180/math.pi)
 		text_b="The angle B is: "+str(B*180/math.pi)
 		text_c="The angle C is: "+str(C*180/math.pi)
 		text_d="The angle D is: "+str(D*180/math.pi)
 		text_e="The area is: "+area_t
-	label_angle_a=Label(root2, text=text_a, width=40)
-	label_angle_b=Label(root2, text=text_b, width=40)
-	label_angle_c=Label(root2, text=text_c, width=40)
-	label_angle_d=Label(root2, text=text_d, width=40)
-	label_area=Label(root2, text=text_e, width=40)
+	label_angle_a=Label(root2, text=text_a, width=50)
+	label_angle_b=Label(root2, text=text_b, width=50)
+	label_angle_c=Label(root2, text=text_c, width=50)
+	label_angle_d=Label(root2, text=text_d, width=50)
+	label_area=Label(root2, text=text_e, width=50)
 	label_angle_a.pack(expand=1)
 	label_angle_b.pack(expand=1)
 	label_angle_c.pack(expand=1)

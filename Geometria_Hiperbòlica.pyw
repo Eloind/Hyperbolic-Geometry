@@ -74,12 +74,12 @@ funcions_possibles.grid(row=0, column=0)
 frases_català1=["Recta 2 punts", "Semirecta 2 punts", "Segment 2 punts", "Cercle centre i punt", "Cercle 3 punts", "Cercle complet", "Eliminar linies", "Informació", "Com usar el programa", "Per a usar aquest programa cal clicar els punts del disc desitjats i seguidament clicar la funció que es vulgui dibuixar. Els botons et diràn quants punts son necessaris i al clicar en ells sense haber marcat suficients punts no creara cap dibuix pero el la finestra d'instruccions et donarà informaciò mès detallada sobre com executar correctament dita funció."]
 frases_castellà1=["Recta 2 puntos", "Semirecta 2 puntos", "Segmento 2 puntos", "Circulo centro y punto", "Circulo 3 puntos", "Circulo completo", "Eliminar lineas", "Información", "Como usar el programa", "Para usar este programa se deben clicar los puntos del disco deseados y seguidamente clicar la función que se quiera dibujar. Los botones te dirán quantos puntos son necesarios y al clicar en ellos sin haber marcado suficientes puntos no creara dibujo alguno pero en la ventana de instrucciones te dará información más detallada sobre como ejecutar correctamente dicha función."]
 frases_anglès1=["Line 2 points", "Ray 2 points", "Line segment 2 points", "Circle center and point", "Circle 3 points", "Complete circle", "Delete lines", "Information", "How to use the program", "To use this program you have to click on the desired points of the disc and then click on the function you want to draw. The buttons will tell you how many points are needed and clicking on them without having marked enough points will not create any drawing but the in instruction window it will give you more detailed information on how to properly execute this function."]
-frases_alemà1=[""]
+frases_alemà1=["Linie 2 Punkte", "Strahl 2 Punkte", "Liniensegment 2 Punkte", "Kreismittelpunkt und Punkt", "Kreis 3 Punkte", "Kreis vervollständigen", "Linien löschen", "Informationen", "Wie man dieses Programm benutzt", "Um dieses Programm zu verwenden, müssen Sie auf die gewünschten Punkte der Disc und dann auf die Funktion klicken, die Sie zeichnen möchten. Die Schaltflächen geben an, wie viele Punkte benötigt werden, und klicken auf diese, ohne genügend Punkte markiert zu haben erstellt keine Zeichnung, aber im Anweisungsfenster erhalten Sie detailliertere Informationen zur ordnungsgemäßen Ausführung dieser Funktion."]
 
 frases_català2=["Triangle 3 punts", "Triangle complet", "Segment complet", "Valor absolut", "Quadrilater 4 punts","Quadrilater complet","Eliminar resultats", "Agraiments", "Agraiments", "Voldria agrair tant als meus tutors d'aquest treball: Vanessa Florenza Royes (docent de Vedruna Balaguer), Roberto Rubio Nuñez (catedràtic de la UAB), al programa Argò, sense el qual no hauria conegut mai aquest tema ni a Roberto, i finalment a ma mare Mª Dolors Díaz Salud, tots ells per haber-me apoiat durant aquest tragecte."]
 frases_castellà2=["Triangulo 3 puntos", "Triangulo completo", "Segmento completo", "Valor absoluto", "Cuadrilatero 4 puntos","Cuadrilateeo completo","Eliminar resultados", "Agraimentos", "Agraimentos", "Queria agrair tanto a mis tutores de este trabajo: Vanessa Florenza Royes (docente de Vedruna Balaguer), Roberto Rubio Nuñez (catedrático de la UAB), al programa Argò, sin el qual no habria conocido nunca este tema ni a Roberto, y finalmente a mi madre Mª Dolors Díaz Salud, todos ellos per haberme apoiado durante este trayecto."]
 frases_anglès2=["Triangle 3 points", "Complete triangle", "Complete segment", "Absolute value", "Quadrilateral 4 points", "Complete quadrilateal", "Delete results", "Agreements", "Agreements", "I would like to thank both my tutors of this work: Vanessa Florenza Royes (teacher at Vedruna Balaguer), Roberto Rubio Nuñez (teacher at UAB), in the Argò program, without which I would never have known this topic or Roberto, and finally my mother Mª Dolors Díaz Salud, all of them for supporting me during this journey. "]
-frases_alemà2=[""]
+frases_alemà2=["Dreieck 3 Punkte", "Dreieck vervollständigen", "Segment vervollständigen", "Absolutwert", "Viereck 4 Punkte", "Viereck vervollständigen", "Ergebnisse löschen", "Vereinbarungen", "Vereinbarungen", "Ich möchte Ich danke meinen beiden Tutoren für diese Arbeit: Vanessa Florenza Royes (Lehrerin bei Vedruna Balaguer), Roberto Rubio Nuñez (Lehrer bei UAB), das Argò-Programm, ohne die ich dieses Thema oder Roberto nie gekannt hätte, und schließlich meine Mutter Mª Dolors Díaz Salud, alle, die mich auf dieser Reise unterstützt haben."]
 
 frases=frases_català1[:]
 var1=StringVar()
@@ -146,6 +146,18 @@ def change_dropdown(*args):
 		root.title("Hiperbolic Geometry")
 		root2.title("Results")
 		root3.title("Instrucions")
+	elif(idioma_elegit=="Deutsch"):
+		if(funcions_elegides=="Funcions 1"):
+			frases=frases_alemà1[:]
+			vari.set(20)
+			varia=vari.get()
+		else:
+			frases=frases_alemà2[:]
+			vari.set(20)
+			varia=vari.get()
+		root.title("Hyperbolische Geometrie")
+		root2.title("Ergebnisse")
+		root3.title("Anleitungen")
 	var1.set(frases[0])
 	var2.set(frases[1])
 	var3.set(frases[2])
@@ -340,6 +352,8 @@ def recta_h():
 		info_recta=Label(root3, text="Para usar la recta haced clic a los dos puntos del disco deseados y a continuación haced clic al botón de crear rectas.")
 	elif(idioma_elegit=="English"):
 		info_recta=Label(root3, text="To use the line do click at the two desired points of the disk and then click the button to create lines.")
+	elif(idioma_elegit=="Deutsch"):
+		info_recta=Label(root3, text="Um die Linie zu verwenden, klicken Sie auf die beiden gewünschten Punkte der Scheibe und dann auf die Schaltfläche, um Linien zu erstellen.")
 	info_recta.pack()
 	if(root.false2==True):
 		if(root.counter==2):
@@ -407,6 +421,10 @@ def semirecta_h():
 	elif(idioma_elegit=="English"):
 		info_semirecta=Label(root3, text='''To use the ray do click at the two desired points of the disk, knowing that the ray will be created
  in the sense of the first to the second click, and then click the button to create rays. ''')
+	elif(idioma_elegit=="Deutsch"):
+		info_semirecta=Label(root3, text='''Um den Strahl zu verwenden, klicken Sie auf die beiden gewünschten Punkte auf der Scheibe, wobei Sie wissen,
+ dass der Strahl im Sinne des ersten bis zweiten Klicks erstellt wird, und klicken Sie dann auf die Schaltfläche,
+ um Strahlen zu erstellen. ''')
 	info_semirecta.pack()
 	if(root.false2==True):
 		if(root.counter==2):
@@ -535,6 +553,8 @@ def segment_h():
 			info_segment=Label(root3, text="Para usar el segmento haced clic a los dos puntos del disco deseados y a continuación haced clic al botón de crear segmentos.")
 		elif(idioma_elegit=="English"):
 			info_segment=Label(root3, text="To use the segment do click at the two desired points of the disk and then click the button to create segments.")
+		elif(idioma_elegit=="Deutsch"):
+			info_segment=Label(root3, text="Um das Segment zu verwenden, klicken Sie auf die beiden gewünschten Punkte der Scheibe und dann auf die Schaltfläche, um Segmente zu erstellen.")
 		info_segment.pack()
 	if(root.false2==False):
 		u1,u2,v1,v2=root2.u1,root2.u2,root2.v1,root2.v2
@@ -668,7 +688,10 @@ def cercle_h():
  y el segundo un punto de la circumferencia, y a continuación haced clic al botón de crear circulos.''')
 	elif(idioma_elegit=="English"):
 		info_cercle=Label(root3, text='''To use the circle do click at the two desired points of the disk, the first will be the center
- and the second a point of the circle, and then click the button to create segments.''')
+ and the second a point of the circle, and then click the button to create circles.''')
+	elif(idioma_elegit=="Deutsch"):
+		info_cercle=Label(root3, text='''Um den Kreis zu verwenden, klicken Sie auf die beiden gewünschten Punkte der Scheibe. Der erste ist die Mitte
+ vund der zweite ein Punkt des Kreises, und klicken Sie dann auf die Schaltfläche, um Kreisen zu erstellen.''')
 	info_cercle.pack()
 	if(root.counter==2):
 		u1,u2,v1,v2=root.u1,root.u2,root.v1,root.v2
@@ -776,6 +799,9 @@ def cercle_2_h():
 	elif(idioma_elegit=="English"):
 		info_cercle_2=Label(root3, text='''To use the circle do click at the three desired points of the disk through which the circle will pass
  and then click the button to create circles with 3 points.''')
+	elif(idioma_elegit=="Deutsch"):
+		info_cercle_2=Label(root3, text='''Um den Kreis zu verwenden, klicken Sie auf die drei gewünschten Punkte der Scheibe, durch die der Kreis wird durch sie gehen
+ Klicken Sie dann auf die Schaltfläche, um Kreise mit 3 Punkten zu erstellen.''')
 	info_cercle_2.pack()
 	if(root.counter==3 or root.counter==7 or root.counter==11):
 		u1,u2,v1,v2,w1,w2=root.u1,root.u2,root.v1,root.v2,root.w1,root.w2
@@ -835,6 +861,8 @@ def triangle_h():
 		info_segment=Label(root3, text="Para usar el triangulo haced clic a los tres puntos del disco deseados y a continuación haced clic al botón de crear triangulos.")
 	elif(idioma_elegit=="English"):
 		info_segment=Label(root3, text="To use the triangle do click at the three desired points of the disk and then click the button to create triangles.")
+	elif(idioma_elegit=="Deutsch"):
+		info_segment=Label(root3, text="Um das Dreieck zu verwenden, klicken Sie auf die drei gewünschten Punkte der Scheibe und dann auf die Schaltfläche, um Dreiecke zu erstellen.")
 	info_segment.pack()
 	root.false=False
 	root.false2=False
@@ -880,6 +908,9 @@ def distancia_h(print_d,cercle):
 	elif(idioma_elegit=="English"):
 		escrit1="The radius is: "
 		escrit2="The hiperbolic distance is: "
+	elif(idioma_elegit=="Deutsch"):
+		escrit1="Der Radius ist: "
+		escrit2="Der hyperbolische Abstand beträgt: "
 	u1=(u1-300)/300
 	u2=(300-u2)/300
 	v1=(v1-300)/300
@@ -1037,6 +1068,11 @@ def area_h(print_d):
 			text_b="The angle B is: "+str(B*180/math.pi)
 			text_c="The angle C is: "+str(C*180/math.pi)
 			text_d="The area is: "+area
+		elif(idioma_elegit=="Deutsch"):
+			text_a="Der Winkel A ist: "+str(A*180/math.pi)
+			text_b="Der Winkel B ist: "+str(B*180/math.pi)
+			text_c="Der Winkel C ist: "+str(C*180/math.pi)
+			text_d="Das Gebiet ist: "+area
 		label_angle_a=Label(root2, text=text_a, width=40)
 		label_angle_b=Label(root2, text=text_b, width=40)
 		label_angle_c=Label(root2, text=text_c, width=40)
@@ -1058,6 +1094,8 @@ def triangle_h_full():
 		info_segment=Label(root3, text="Para usar el triangulo haced clic a los tres puntos del disco deseados y a continuación haced clic al botón de crear triangulos.")
 	elif(idioma_elegit=="English"):
 		info_segment=Label(root3, text="To use the triangle do click at the three desired points of the disk and then click the button to create triangles.")
+	elif(idioma_elegit=="Deutsch"):
+		info_segment=Label(root3, text="Um das Dreieck zu verwenden, klicken Sie auf die drei gewünschten Punkte der Scheibe und dann auf die Schaltfläche, um Dreiecke zu erstellen.")
 	info_segment.pack()
 	triangle_h()
 	if(root.counter==3 or root.counter==7 or root.counter==11):
@@ -1080,6 +1118,8 @@ def segment_h_full():
 		info_segment=Label(root3, text="Para usar el segmento haced clic a los dos puntos del disco deseados y a continuación haced clic al botón de crear segmentos.")
 	elif(idioma_elegit=="English"):
 		info_segment=Label(root3, text="To use the segment do click at the two desired points of the disk and then click the button to create segments.")
+	elif(idioma_elegit=="Deutsch"):
+			info_segment=Label(root3, text="Um das Segment zu verwenden, klicken Sie auf die beiden gewünschten Punkte der Scheibe und dann auf die Schaltfläche, um Segmente zu erstellen.")
 	info_segment.pack()
 	if(root.false2==True):
 		if(root.counter==2):
@@ -1106,6 +1146,8 @@ def perimetre_cercle():
 		text_peri="El perimetro es: "+str(perimetre)
 	elif(idioma_elegit=="English"):
 		text_peri="The circumference is: "+str(perimetre)
+	elif(idioma_elegit=="Deutsch"):
+		text_peri="Der Umfang ist: "+str(perimetre)
 	label_peri=Label(root2, text=text_peri, width=40)
 	label_peri.pack(expand=1)
 
@@ -1120,6 +1162,8 @@ def area_cercle():
 		text_a_c="El area es: "+str(area)
 	elif(idioma_elegit=="English"):
  		text_a_c="The area is: "+str(area)
+	elif(idioma_elegit=="Deutsch"):
+ 		text_a_c="Das Gebiet ist: "+str(area)
 	label_a_c=Label(root2, text=text_a_c, width=40)
 	label_a_c.pack(expand=1)
 
@@ -1136,6 +1180,9 @@ def cercle_h_full():
 	elif(idioma_elegit=="English"):
 		info_cercle=Label(root3, text='''To use the circle do click at the two desired points of the disk, the first will be the center
  and the second a point of the circle, and then click the button to create segments.''')
+	elif(idioma_elegit=="Deutsch"):
+		info_cercle=Label(root3, text='''Um den Kreis zu verwenden, klicken Sie auf die beiden gewünschten Punkte der Scheibe. Der erste ist die Mitte
+ vund der zweite ein Punkt des Kreises, und klicken Sie dann auf die Schaltfläche, um Kreisen zu erstellen.''')
 	info_cercle.pack()
 	if(root.counter==2):
 		root2.u12,root2.u22,root2.v12,root2.v22=root.u1,root.u2,root.v1,root.v2
@@ -1165,6 +1212,8 @@ def info():
 		messagebox.showinfo(frases_castellà1[8], frases_castellà1[9])
 	elif(idioma_elegit=="English"):
 		messagebox.showinfo(frases_anglès1[8], frases_anglès1[9])
+	elif(idioma_elegit=="Deutsch"):
+		messagebox.showinfo(frases_alemà1[8], frases_alemà1[9])
 
 def agrair():
 	idioma_elegit=idioma.get()
@@ -1174,6 +1223,8 @@ def agrair():
 		messagebox.showinfo(frases_castellà2[8], frases_castellà2[9])
 	elif(idioma_elegit=="English"):
 		messagebox.showinfo(frases_anglès2[8], frases_anglès2[9])
+	elif(idioma_elegit=="Deutsch"):
+		messagebox.showinfo(frases_alemà2[8], frases_alemà2[9])
 
 def eliminar_resultats():
 	for ele in root2.winfo_children():
@@ -1204,6 +1255,9 @@ def abs_x():
 	elif(idioma_elegit=="English"):
 		info_recta=Label(root3, text='''To use the line in absolute value do click at the two desired points of the disk
  and then click the button to create lines in absolute value.''')
+	elif(idioma_elegit=="Deutsch"):
+		info_recta=Label(root3, text='''Um die Linie in absoluten Wert zu verwenden, klicken Sie auf die beiden gewünschten Punkte der Scheibe
+ Klicken Sie dann auf die Schaltfläche, um Linien in absoluten Werten zu erstellen.''')
 	info_recta.pack()
 	if(root.counter==2):
 		u1,u2,v1,v2=root.u1,root.u2,root.v1,root.v2
@@ -1312,9 +1366,11 @@ def quadrat_h():
 	if(idioma_elegit=="Català"):
 		info_recta=Label(root3, text="Per usar el quadrilater feu clic als 4 punts del disc desitjats i a continuació feu clic al botó de crear quadrilaters.")
 	elif(idioma_elegit=="Español"):
-		info_recta=Label(root3, text="Para usar el cuadrilatero haced clic a los 4 puntos del disco deseados y a continuación haced clic al botón de crear quadrilateros.")
+		info_recta=Label(root3, text="Para usar el cuadrilatero haced clic a los 4 puntos del disco deseados y a continuación haced clic al botón de crear cuadrilateros.")
 	elif(idioma_elegit=="English"):
-		info_recta=Label(root3, text="To use the quadrilateral do click at the 4 desired points of the disk and then click the button to create quadrilateals.")
+		info_recta=Label(root3, text="To use the quadrilateral do click at the 4 desired points of the disk and then click the button to create quadrilaterals.")
+	elif(idioma_elegit=="Deutsch"):
+		info_recta=Label(root3, text="Um das Viereck zu verwenden, klicken Sie auf die 4 gewünschten Punkte der Scheibe und dann auf die Schaltfläche, um Vierecke zu erstellen.")
 	info_recta.pack()
 	u1,u2,v1,v2,w1,w2,y1,y2=root.u1,root.u2,root.v1,root.v2,root.w1,root.w2,root.y1,root.y2
 	root.false=False
@@ -1339,7 +1395,9 @@ def quadrat_h_full():
 	elif(idioma_elegit=="Español"):
 		info_recta=Label(root3, text="Para usar el cuadrilatero haced clic a los 4 puntos del disco deseados y a continuación haced clic al botón de crear quadrilateros.")
 	elif(idioma_elegit=="English"):
-		info_recta=Label(root3, text="To use the quadrilateral do click at the 4 desired points of the disk and then click the button to create quadrilateals.")
+		info_recta=Label(root3, text="To use the quadrilateral do click at the 4 desired points of the disk and then click the button to create quadrilaterals.")
+	elif(idioma_elegit=="Deutsch"):
+		info_recta=Label(root3, text="Um das Viereck zu verwenden, klicken Sie auf die 4 gewünschten Punkte der Scheibe und dann auf die Schaltfläche, um Vierecke zu erstellen.")
 	info_recta.pack()
 	root.false2=False
 	root2.u1,root2.u2,root2.v1,root2.v2=root.u1,root.u2,root.v1,root.v2

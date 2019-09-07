@@ -74,7 +74,7 @@ funcions_possibles.grid(row=0, column=0)
 frases_català1=["Recta 2 punts", "Semirecta 2 punts", "Segment 2 punts", "Cercle centre i punt", "Cercle 3 punts", "Cercle complet", "Eliminar linies", "Informació", "Com usar el programa", "Per a usar aquest programa cal clicar els punts del disc desitjats i seguidament clicar la funció que es vulgui dibuixar. Els botons et diràn quants punts son necessaris i al clicar en ells sense haber marcat suficients punts no creara cap dibuix pero el la finestra d'instruccions et donarà informaciò mès detallada sobre com executar correctament dita funció."]
 frases_castellà1=["Recta 2 puntos", "Semirecta 2 puntos", "Segmento 2 puntos", "Circulo centro y punto", "Circulo 3 puntos", "Circulo completo", "Eliminar lineas", "Información", "Como usar el programa", "Para usar este programa se deben clicar los puntos del disco deseados y seguidamente clicar la función que se quiera dibujar. Los botones te dirán quantos puntos son necesarios y al clicar en ellos sin haber marcado suficientes puntos no creara dibujo alguno pero en la ventana de instrucciones te dará información más detallada sobre como ejecutar correctamente dicha función."]
 frases_anglès1=["Line 2 points", "Ray 2 points", "Line segment 2 points", "Circle center and point", "Circle 3 points", "Complete circle", "Delete lines", "Information", "How to use the program", "To use this program you have to click on the desired points of the disc and then click on the function you want to draw. The buttons will tell you how many points are needed and clicking on them without having marked enough points will not create any drawing but the in instruction window it will give you more detailed information on how to properly execute this function."]
-frases_alemà1=["Linie 2 Punkte", "Strahl 2 Punkte", "Liniensegment 2 Punkte", "Kreismittelpunkt und Punkt", "Kreis 3 Punkte", "Kreis vervollständigen", "Linien löschen", "Informationen", "Wie man dieses Programm benutzt", "Um dieses Programm zu verwenden, müssen Sie auf die gewünschten Punkte der Disc und dann auf die Funktion klicken, die Sie zeichnen möchten. Die Schaltflächen geben an, wie viele Punkte benötigt werden, und klicken auf diese, ohne genügend Punkte markiert zu haben erstellt keine Zeichnung, aber im Anweisungsfenster erhalten Sie detailliertere Informationen zur ordnungsgemäßen Ausführung dieser Funktion."]
+frases_alemà1=["Linie 2 Punkte", "Strahl 2 Punkte", "Liniensegment 2 Punkte", "Kreis Zentrum und Punkt", "Kreis 3 Punkte", "Kreis vervollständigen", "Linien löschen", "Informationen", "Wie man dieses Programm benutzt", "Um dieses Programm zu verwenden, müssen Sie auf die gewünschten Punkte der Disc und dann auf die Funktion klicken, die Sie zeichnen möchten. Die Schaltflächen geben an, wie viele Punkte benötigt werden, und klicken auf diese, ohne genügend Punkte markiert zu haben erstellt keine Zeichnung, aber im Anweisungsfenster erhalten Sie detailliertere Informationen zur ordnungsgemäßen Ausführung dieser Funktion."]
 
 frases_català2=["Triangle 3 punts", "Triangle complet", "Segment complet", "Valor absolut", "Quadrilater 4 punts","Quadrilater complet","Eliminar resultats", "Agraiments", "Agraiments", "Voldria agrair tant als meus tutors d'aquest treball: Vanessa Florenza Royes (docent de Vedruna Balaguer), Roberto Rubio Nuñez (catedràtic de la UAB), al programa Argò, sense el qual no hauria conegut mai aquest tema ni a Roberto, i finalment a ma mare Mª Dolors Díaz Salud, tots ells per haber-me apoiat durant aquest tragecte."]
 frases_castellà2=["Triangulo 3 puntos", "Triangulo completo", "Segmento completo", "Valor absoluto", "Cuadrilatero 4 puntos","Cuadrilateeo completo","Eliminar resultados", "Agraimentos", "Agraimentos", "Queria agrair tanto a mis tutores de este trabajo: Vanessa Florenza Royes (docente de Vedruna Balaguer), Roberto Rubio Nuñez (catedrático de la UAB), al programa Argò, sin el qual no habria conocido nunca este tema ni a Roberto, y finalmente a mi madre Mª Dolors Díaz Salud, todos ellos per haberme apoiado durante este trayecto."]
@@ -524,10 +524,27 @@ def semirecta_h():
 			alpha_2+=math.pi
 		elif(u1-i>=0 and u2-j<=0):
 			alpha_2=2*math.pi-alpha_2
-		if(alpha_2>beta_2):
-			gamma=-180
-		elif(alpha_2<beta_2):
-			gamma=180
+		if(((alpha_2>0 and alpha_2<math.pi/2) and (beta_2>0 and beta_2<math.pi/2)) or ((alpha_2>math.pi/2 and alpha_2<math.pi) and (beta_2>math.pi/2 and beta_2<math.pi)) or ((alpha_2>math.pi and alpha_2<3*math.pi/2) and (beta_2>math.pi and beta_2<3*math.pi/2)) or ((alpha_2>3*math.pi/2 and alpha_2<2*math.pi) and (beta_2>3*math.pi/2 and beta_2<2*math.pi))):
+			if(alpha_2>beta_2):
+				gamma=-180
+			elif(alpha_2<beta_2):
+				gamma=180
+		elif(((alpha_2>0 and alpha_2<math.pi/2) and ((beta_2>math.pi/2 and beta_2<math.pi) or (beta_2>3*math.pi/2 and beta_2<2*math.pi))) or ((alpha_2>math.pi/2 and alpha_2<math.pi) and ((beta_2>math.pi and beta_2<3*math.pi/2) or (beta_2>0 and beta_2<math.pi/2))) or ((alpha_2>math.pi and alpha_2<3*math.pi/2) and ((beta_2>math.pi/2 and beta_2<math.pi) or (beta_2>3*math.pi/2 and beta_2<2*math.pi))) or ((alpha_2>3*math.pi/2 and alpha_2<2*math.pi) and ((beta_2>math.pi and beta_2<3*math.pi/2) or (beta_2>0 and beta_2<math.pi/2)))):
+			if(((alpha_2>0 and alpha_2<math.pi/2) and ((beta_2>3*math.pi/2 and beta_2<2*math.pi))) or ((beta_2>0 and beta_2<math.pi/2) and ((alpha_2>3*math.pi/2 and alpha_2<2*math.pi)))):
+				if(alpha_2>beta_2):
+					gamma=180
+				else:
+					gamma=-180
+			else:
+				if(alpha_2>beta_2):
+					gamma=-180
+				else:
+					gamma=180
+		else:
+			if(alpha_2>beta_2):
+				gamma=180
+			elif(alpha_2<beta_2):
+				gamma=-180
 		disc.create_arc(i+300-r_semirecta, -j+300-r_semirecta, i+300+r_semirecta, -j+300+r_semirecta, start=angle_inicial*180/math.pi, extent=gamma, fill="", outline="black", style="arc")
 	else:
 		u1-=300

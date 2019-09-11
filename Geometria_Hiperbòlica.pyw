@@ -1099,7 +1099,7 @@ def area_h(print_d):
 		label_angle_c.pack(expand=1)
 		label_area.pack(expand=1)
 	else:
-		root.area,root.a,root.b,root.c=area,a,b,c
+		root.area,root.a,root.b,root.c=area,A,B,C
 
 def triangle_h_full():
 	for ele in root3.winfo_children():
@@ -1431,10 +1431,10 @@ def quadrat_h_full():
 	root3.u1,root3.u2,root3.v1,root3.v2,root3.w1,root3.w2=root.w1,root.w2,root.y1,root.y2,root.u1,root.u2
 	area_h(False)
 	a2,d,e,f=root.area,root.a,root.b,root.c
-	A=a+f
+	A=a+e
 	B=c
-	C=c+d
-	D=e
+	C=b+d
+	D=f
 	area_t=a1+a2
 	if(area_t==math.pi):
 		area_t="π"

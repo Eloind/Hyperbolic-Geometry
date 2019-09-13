@@ -1247,17 +1247,6 @@ def eliminar_resultats():
 	for ele in root2.winfo_children():
   		ele.destroy()
 
-def coordenades_h():
-	u1,u2=root.u1,root.u2
-	del root.u1,root.u2
-	root.counter=0
-	root2.u1,root2.u2,root2.v1,root2.v2=u1+300,300,300,300
-	coordenada_x=distancia_h(False,False)
-	root2.u1,root2.u2,root2.v1,root2.v2=300,300-u2,300,300
-	coordenada_y=distancia_h(False,False)
-	coordenades=[coordenada_x,coordenada_y]
-	return coordenades
-
 def abs_x():
 	root.false2=False
 	for ele in root3.winfo_children():

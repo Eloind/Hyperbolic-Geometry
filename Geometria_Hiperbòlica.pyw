@@ -4,6 +4,7 @@ import math
 from PIL import Image, ImageTk
 import numpy
 import winsound
+import os
 
 #----Basic per inicar programa----
 
@@ -76,10 +77,10 @@ frases_castellà1=["Recta 2 puntos", "Semirecta 2 puntos", "Segmento 2 puntos", 
 frases_anglès1=["Line 2 points", "Ray 2 points", "Line segment 2 points", "Circle center and point", "Circle 3 points", "Complete circle", "Delete lines", "Information", "How to use the program", "To use this program you have to click on the desired points of the disc and then click on the function you want to draw. The buttons will tell you how many points are needed and clicking on them without having marked enough points will not create any drawing but the in instruction window it will give you more detailed information on how to properly execute this function."]
 frases_alemà1=["Linie 2 Punkte", "Strahl 2 Punkte", "Liniensegment 2 Punkte", "Kreis Zentrum und Punkt", "Kreis 3 Punkte", "Kreis vervollständigen", "Linien löschen", "Informationen", "Wie man dieses Programm benutzt", "Um dieses Programm zu verwenden, müssen Sie auf die gewünschten Punkte der Disc und dann auf die Funktion klicken, die Sie zeichnen möchten. Die Schaltflächen geben an, wie viele Punkte benötigt werden, und klicken auf diese, ohne genügend Punkte markiert zu haben erstellt keine Zeichnung, aber im Anweisungsfenster erhalten Sie detailliertere Informationen zur ordnungsgemäßen Ausführung dieser Funktion."]
 
-frases_català2=["Triangle 3 punts", "Triangle complet", "Segment complet", "Valor absolut", "Quadrilater 4 punts","Quadrilater complet","Eliminar resultats", "Agraiments", "Agraiments", "Voldria agrair tant als meus tutors d'aquest treball: Vanessa Florenza Royes (docent de Vedruna Balaguer), Roberto Rubio Nuñez (catedràtic de la UAB), al programa Argò, sense el qual no hauria conegut mai aquest tema ni a Roberto, i finalment a ma mare Mª Dolors Díaz Salud, tots ells per haber-me apoiat durant aquest tragecte."]
-frases_castellà2=["Triangulo 3 puntos", "Triangulo completo", "Segmento completo", "Valor absoluto", "Cuadrilatero 4 puntos","Cuadrilateeo completo","Eliminar resultados", "Agraimentos", "Agraimentos", "Queria agrair tanto a mis tutores de este trabajo: Vanessa Florenza Royes (docente de Vedruna Balaguer), Roberto Rubio Nuñez (catedrático de la UAB), al programa Argò, sin el qual no habria conocido nunca este tema ni a Roberto, y finalmente a mi madre Mª Dolors Díaz Salud, todos ellos per haberme apoiado durante este trayecto."]
-frases_anglès2=["Triangle 3 points", "Complete triangle", "Complete segment", "Absolute value", "Quadrilateral 4 points", "Complete quadrilateal", "Delete results", "Agreements", "Agreements", "I would like to thank both my tutors of this work: Vanessa Florenza Royes (teacher at Vedruna Balaguer), Roberto Rubio Nuñez (teacher at UAB), in the Argò program, without which I would never have known this topic or Roberto, and finally my mother Mª Dolors Díaz Salud, all of them for supporting me during this journey. "]
-frases_alemà2=["Dreieck 3 Punkte", "Dreieck vervollständigen", "Segment vervollständigen", "Absolutwert", "Viereck 4 Punkte", "Viereck vervollständigen", "Ergebnisse löschen", "Vereinbarungen", "Vereinbarungen", "Ich möchte Ich danke meinen beiden Tutoren für diese Arbeit: Vanessa Florenza Royes (Lehrerin bei Vedruna Balaguer), Roberto Rubio Nuñez (Lehrer bei UAB), das Argò-Programm, ohne die ich dieses Thema oder Roberto nie gekannt hätte, und schließlich meine Mutter Mª Dolors Díaz Salud, alle, die mich auf dieser Reise unterstützt haben."]
+frases_català2=["Triangle 3 punts", "Triangle complet", "Segment complet", "Valor absolut", "Quadrilater 4 punts","Quadrilater complet","Eliminar resultats", "Agraiments", "Agraiments", "Voldria agrair tant als meus tutors d'aquest treball: Vanessa Florenza Royes (docent de Vedruna Balaguer), Roberto Rubio Nuñez (catedràtic de la UAB), al programa Argò, sense el qual no hauria conegut mai aquest tema ni a Roberto, i finalment a ma mare Mª Dolors Díaz Salud, tots ells per haber-me apoiat durant aquest tragecte. D'igual forma voldria donar gracies a Llum Ruiz Capdevila (docent de Vedruna Balaguer) qui ha ajudat a perfeccionar visualment aquest programa."]
+frases_castellà2=["Triangulo 3 puntos", "Triangulo completo", "Segmento completo", "Valor absoluto", "Cuadrilatero 4 puntos","Cuadrilateeo completo","Eliminar resultados", "Agraimentos", "Agraimentos", "Queria agrair tanto a mis tutores de este trabajo: Vanessa Florenza Royes (docente de Vedruna Balaguer), Roberto Rubio Nuñez (catedrático de la UAB), al programa Argò, sin el qual no habria conocido nunca este tema ni a Roberto, y finalmente a mi madre Mª Dolors Díaz Salud, todos ellos per haberme apoiado durante este trayecto. De igual forma querria dar gracias a Llum Ruiz Capdevila (docente de Vedruna Balaguer) quien ha ayudado a perfeccionar visualmente este programa."]
+frases_anglès2=["Triangle 3 points", "Complete triangle", "Complete segment", "Absolute value", "Quadrilateral 4 points", "Complete quadrilateal", "Delete results", "Agreements", "Agreements", "I would like to thank both my tutors of this work: Vanessa Florenza Royes (docent at Vedruna Balaguer), Roberto Rubio Nuñez (cathedratic at UAB), in the Argò program, without which I would never have known this topic or Roberto, and finally my mother Mª Dolors Díaz Salud, all of them for supporting me during this journey.  The same way I would want to thank Llum Ruiz Capdevila (docent at Vedruna Balaguer) who has helped to perfect this program visualy."]
+frases_alemà2=["Dreieck 3 Punkte", "Dreieck vervollständigen", "Segment vervollständigen", "Absolutwert", "Viereck 4 Punkte", "Viereck vervollständigen", "Ergebnisse löschen", "Vereinbarungen", "Vereinbarungen", "Ich möchte Ich danke meinen beiden Tutoren für diese Arbeit: Vanessa Florenza Royes (Dozentin bei Vedruna Balaguer), Roberto Rubio Nuñez (Kathedratisch bei UAB), das Argò-Programm, ohne die ich dieses Thema oder Roberto nie gekannt hätte, und schließlich meine Mutter Mª Dolors Díaz Salud, alle, die mich auf dieser Reise unterstützt haben. Genauso möchte ich mich bei Llum Ruiz Capdevila (Dozentin bei Vedruna Balaguer) bedanken, die dazu beigetragen hat, dieses Programm visuell zu perfektionieren."]
 
 frases=frases_català1[:]
 var1=StringVar()
@@ -231,6 +232,10 @@ def change_images(*args):
 		img_info = Label(myFrame, image=render_info)
 		img_info.image = render_info
 		img_info.grid(row=1, column=7)
+
+		os.chdir("C:\\Users\\USUARIO\\Documents\\Hiperbolic Geometry\\Imatges")
+		botó_info.config(cursor="@Question_Mark.cur")
+		os.chdir("C:\\Users\\USUARIO\\Documents\\Hiperbolic Geometry")
 	else:
 		load_recta = Image.open("Imatges\\Triangle.jpg")
 		render_recta = ImageTk.PhotoImage(load_recta)
@@ -279,6 +284,10 @@ def change_images(*args):
 		img_info = Label(myFrame, image=render_info)
 		img_info.image = render_info
 		img_info.grid(row=1, column=7)
+
+		os.chdir("C:\\Users\\USUARIO\\Documents\\Hiperbolic Geometry\\Imatges")
+		botó_info.config(cursor="@Heart.cur")
+		os.chdir("C:\\Users\\USUARIO\\Documents\\Hiperbolic Geometry")
 
 funcions_h.trace("w", change_images)
 
@@ -1565,29 +1574,33 @@ def h_h():
 
 #----Botons----
 
-botó_recta=Button(myFrame,textvariable=var1, fg="red", bg="#875F5F", width=15, cursor="hand2", command=a_h)
+botó_recta=Button(myFrame,textvariable=var1, fg="red", bg="#875F5F", activebackground="red", activeforeground="#875F5F", width=15, cursor="hand2", command=a_h)
 botó_recta.grid(row=0, column=2 )
 
-botó_raig=Button(myFrame,textvariable=var2, fg="#FF9700", bg="#80715B", width=15, cursor="hand2", command=b_h)
+botó_raig=Button(myFrame,textvariable=var2, fg="#FF9700", bg="#80715B", activebackground="#FF9700", activeforeground="#80715B", width=15, cursor="hand2", command=b_h)
 botó_raig.grid(row=0, column=4)
 
-botó_segment=Button(myFrame,textvariable=var3, fg="#FFEC00", bg="#7E8041", width=15, cursor="hand2", command=c_h)
+botó_segment=Button(myFrame,textvariable=var3, fg="#FFEC00", bg="#7E8041", activebackground="#FFEC00", activeforeground="#7E8041", width=15, cursor="hand2", command=c_h)
 botó_segment.grid(row=0, column=6)
 
-botó_cercle=Button(myFrame,textvariable=var4, fg="#00FBFF", bg="#547E81", width=15, cursor="hand2", command=d_h)
+botó_cercle=Button(myFrame,textvariable=var4, fg="#00FBFF", bg="#547E81", activebackground="#00FBFF", activeforeground="#547E81", width=15, cursor="hand2", command=d_h)
 botó_cercle.grid(row=1, column=2)
 
-botó_cercle_2=Button(myFrame,textvariable=var5, fg="#002BFF", bg="#454D79", width=15, cursor="hand2", command=e_h)
+botó_cercle_2=Button(myFrame,textvariable=var5, fg="#002BFF", bg="#454D79", activebackground="#002BFF", activeforeground="#454D79", width=15, cursor="hand2", command=e_h)
 botó_cercle_2.grid(row=1, column=4)
 
-botó_arc=Button(myFrame,textvariable=var6, fg="#9700FF", bg="#694483", width=15, cursor="hand2", command=f_h)
+botó_arc=Button(myFrame,textvariable=var6, fg="#9700FF", bg="#694483", activebackground="#9700FF", activeforeground="#694483", width=15, cursor="hand2", command=f_h)
 botó_arc.grid(row=1, column=6)
 
-botó_eliminar=Button(myFrame,textvariable=var7, fg="#1EB700", bg="#406F36", width=15, cursor="hand2", command=g_h)
+os.chdir("C:\\Users\\USUARIO\\Documents\\Hiperbolic Geometry\\Imatges")
+
+botó_eliminar=Button(myFrame,textvariable=var7, fg="#1EB700", bg="#406F36", activebackground="#1EB700", activeforeground="#406F36", width=15, cursor="@Trash.cur", command=g_h)
 botó_eliminar.grid(row=0, column=8)
 
-botó_info=Button(myFrame,textvariable=var8, fg="#D500FF", bg="#65386E", width=15, cursor="question_arrow", command=h_h)
+botó_info=Button(myFrame,textvariable=var8, fg="#D500FF", bg="#65386E", activebackground="#D500FF", activeforeground="#65386E", width=15, cursor="@Question_Mark.cur", command=h_h)
 botó_info.grid(row=1, column=8)
+
+os.chdir("C:\\Users\\USUARIO\\Documents\\Hiperbolic Geometry")
 
 #----Final----
 

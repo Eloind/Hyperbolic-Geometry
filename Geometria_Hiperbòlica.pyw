@@ -5,6 +5,7 @@ from PIL import Image, ImageTk
 import numpy
 import winsound
 import os
+from threading import Thread
 
 #----Basic per inicar programa----
 
@@ -58,6 +59,12 @@ root3.config(bd=20, relief="sunken", bg="grey")
 
 myFrame.config(bg="grey")
 
+def play_sound_botò():
+    winsound.PlaySound("Sons\\Botò", winsound.SND_ALIAS)
+
+def play_sound_clic():
+    winsound.PlaySound("Sons\\Clic", winsound.SND_ALIAS)
+
 idioma=StringVar(myFrame)
 idioma.set("Català")
 idiomes_possibles=["Català", "Español", "English", "Deutsch"]
@@ -108,7 +115,8 @@ vari.set(15)
 varia=vari.get()
 
 def change_dropdown(*args):
-	winsound.PlaySound("Sons\\Botò", winsound.SND_FILENAME)
+	thread = Thread(target=play_sound_botò)
+	thread.start()
 	idioma_elegit=idioma.get()
 	funcions_elegides=funcions_h.get()
 	if(idioma_elegit=="Català"):
@@ -1472,7 +1480,8 @@ def quadrat_h_full():
 	root.false2=True
 
 def click(event):
-	winsound.PlaySound("Sons\\Clic", winsound.SND_FILENAME)
+	thread = Thread(target=play_sound_clic)
+	thread.start()
 	x = event.x_root - disc.winfo_rootx() 
 	y = event.y_root - disc.winfo_rooty()
 	root.counter+=1

@@ -6,6 +6,8 @@ import numpy
 import winsound
 import os
 from threading import Thread
+import pygame
+import time
 
 #----Basic per inicar programa----
 
@@ -59,11 +61,26 @@ root3.config(bd=20, relief="sunken", bg="grey")
 
 myFrame.config(bg="grey")
 
+pygame.init()
+pygame.mixer.init()
+
+musica=True
+
+def play_sound_fondo():
+	while musica==True:
+		pygame.mixer.Channel(0).play(pygame.mixer.Sound("Sons\\Melodyloops-Season-of-joy.wav"))
+		time.sleep(38)
+
+
+thread = Thread(target=play_sound_fondo)
+thread.start()
+
 def play_sound_botò():
-    winsound.PlaySound("Sons\\Botò", winsound.SND_ALIAS)
+	pygame.mixer.Channel(1).play(pygame.mixer.Sound("Sons\\Botò.wav"))
+
 
 def play_sound_clic():
-    winsound.PlaySound("Sons\\Clic", winsound.SND_ALIAS)
+	pygame.mixer.Channel(2).play(pygame.mixer.Sound("Sons\\Clic.wav"))
 
 idioma=StringVar(myFrame)
 idioma.set("Català")
@@ -1615,3 +1632,5 @@ os.chdir("C:\\Users\\USUARIO\\Documents\\Hiperbolic Geometry")
 
 disc.pack()
 root.mainloop()
+musica=False
+pygame.mixer.stop()

@@ -69,7 +69,7 @@ musica=True
 def play_sound_fondo():
 	while musica==True:
 		pygame.mixer.Channel(0).play(pygame.mixer.Sound("Sons\\Melodyloops-Season-of-joy.wav"))
-		time.sleep(38)
+		time.sleep(38.0219)
 
 
 thread = Thread(target=play_sound_fondo)

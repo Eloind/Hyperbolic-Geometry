@@ -83,28 +83,28 @@ def play_sound_clic():
 	pygame.mixer.Channel(2).play(pygame.mixer.Sound("Sons\\Clic.wav"))
 
 idioma=StringVar(myFrame)
-idioma.set("Català")
-idiomes_possibles=["Català", "Español", "English", "Deutsch"]
+idioma.set("CATALÀ")
+idiomes_possibles=["CATALÀ", "ESPAÑOL", "ENGLISH", "DEUTSCH"]
 idiomes_possibles=OptionMenu(myFrame, idioma, *idiomes_possibles)
 idiomes_possibles.config(width=10, bg="lightgrey")
 idiomes_possibles.grid(row=1, column=0)
 
 funcions_h=StringVar(myFrame)
-funcions_h.set("Funcions 1")
-funcions_possibles=["Funcions 1", "Funcions 2"]
+funcions_h.set("FUNCIONS 1")
+funcions_possibles=["FUNCIONS 1", "FUNCIONS 2"]
 funcions_possibles=OptionMenu(myFrame, funcions_h, *funcions_possibles)
 funcions_possibles.config(width=10, bg="lightgrey")
 funcions_possibles.grid(row=0, column=0)
 
-frases_català1=["Recta 2 punts", "Semirecta 2 punts", "Segment 2 punts", "Cercle centre i punt", "Cercle 3 punts", "Cercle complet", "Eliminar linies", "Informació", "Com usar el programa", "Per a usar aquest programa cal clicar els punts del disc desitjats i seguidament clicar la funció que es vulgui dibuixar. Els botons et diràn quants punts son necessaris i al clicar en ells sense haber marcat suficients punts no creara cap dibuix pero el la finestra d'instruccions et donarà informaciò mès detallada sobre com executar correctament dita funció."]
-frases_castellà1=["Recta 2 puntos", "Semirecta 2 puntos", "Segmento 2 puntos", "Circulo centro y punto", "Circulo 3 puntos", "Circulo completo", "Eliminar lineas", "Información", "Como usar el programa", "Para usar este programa se deben clicar los puntos del disco deseados y seguidamente clicar la función que se quiera dibujar. Los botones te dirán quantos puntos son necesarios y al clicar en ellos sin haber marcado suficientes puntos no creara dibujo alguno pero en la ventana de instrucciones te dará información más detallada sobre como ejecutar correctamente dicha función."]
-frases_anglès1=["Line 2 points", "Ray 2 points", "Line segment 2 points", "Circle center and point", "Circle 3 points", "Complete circle", "Delete lines", "Information", "How to use the program", "To use this program you have to click on the desired points of the disc and then click on the function you want to draw. The buttons will tell you how many points are needed and clicking on them without having marked enough points will not create any drawing but the in instruction window it will give you more detailed information on how to properly execute this function."]
-frases_alemà1=["Linie 2 Punkte", "Strahl 2 Punkte", "Liniensegment 2 Punkte", "Kreis Zentrum und Punkt", "Kreis 3 Punkte", "Kreis vervollständigen", "Linien löschen", "Informationen", "Wie man dieses Programm benutzt", "Um dieses Programm zu verwenden, müssen Sie auf die gewünschten Punkte der Disc und dann auf die Funktion klicken, die Sie zeichnen möchten. Die Schaltflächen geben an, wie viele Punkte benötigt werden, und klicken auf diese, ohne genügend Punkte markiert zu haben erstellt keine Zeichnung, aber im Anweisungsfenster erhalten Sie detailliertere Informationen zur ordnungsgemäßen Ausführung dieser Funktion."]
+frases_català1=["RECTA", "SEMIRECTA", "SEGMENT", "CERCLE AMB CENTRE", "ELIMINAR LINIES", "INFORMACIÓ", "Com usar el programa", "Per a usar aquest programa cal clicar els punts del disc desitjats i seguidament clicar la funció que es vulgui dibuixar. Els botons et diràn quants punts son necessaris i al clicar en ells sense haber marcat suficients punts no creara cap dibuix pero el la finestra d'instruccions et donarà informaciò mès detallada sobre com executar correctament dita funció."]
+frases_castellà1=["RECTA", "SEMIRECTA", "SEGMENTO", "CIRCULO CON CENTRO", "ELIMINAR LINEAS", "INFORMACIÓN", "Como usar el programa", "Para usar este programa se deben clicar los puntos del disco deseados y seguidamente clicar la función que se quiera dibujar. Los botones te dirán quantos puntos son necesarios y al clicar en ellos sin haber marcado suficientes puntos no creara dibujo alguno pero en la ventana de instrucciones te dará información más detallada sobre como ejecutar correctamente dicha función."]
+frases_anglès1=["LINE", "RAY", "LINE SEGMENT", "CIRCLE  WITH CENTER",  "DELETE LINES", "INFORMATION", "How to use the program", "To use this program you have to click on the desired points of the disc and then click on the function you want to draw. The buttons will tell you how many points are needed and clicking on them without having marked enough points will not create any drawing but the in instruction window it will give you more detailed information on how to properly execute this function."]
+frases_alemà1=["LINIE", "STRAHL", "LINIENSEGMENT", "KREIS MIT ZENTRUM", "LINIEN LÖSCHEN", "INFORMATIONEN", "Wie man dieses Programm benutzt", "Um dieses Programm zu verwenden, müssen Sie auf die gewünschten Punkte der Disc und dann auf die Funktion klicken, die Sie zeichnen möchten. Die Schaltflächen geben an, wie viele Punkte benötigt werden, und klicken auf diese, ohne genügend Punkte markiert zu haben erstellt keine Zeichnung, aber im Anweisungsfenster erhalten Sie detailliertere Informationen zur ordnungsgemäßen Ausführung dieser Funktion."]
 
-frases_català2=["Triangle 3 punts", "Triangle complet", "Segment complet", "Valor absolut", "Quadrilater 4 punts","Quadrilater complet","Eliminar resultats", "Agraiments", "Agraiments", "Voldria agrair tant als meus tutors d'aquest treball: Vanessa Florenza Royes (docent de Vedruna Balaguer), Roberto Rubio Nuñez (catedràtic de la UAB), al programa Argò, sense el qual no hauria conegut mai aquest tema ni a Roberto, i finalment a ma mare Mª Dolors Díaz Salud, tots ells per haber-me apoiat durant aquest tragecte. D'igual forma voldria donar gracies a Llum Ruiz Capdevila (docent de Vedruna Balaguer) qui ha ajudat a perfeccionar visualment aquest programa."]
-frases_castellà2=["Triangulo 3 puntos", "Triangulo completo", "Segmento completo", "Valor absoluto", "Cuadrilatero 4 puntos","Cuadrilateeo completo","Eliminar resultados", "Agraimentos", "Agraimentos", "Queria agrair tanto a mis tutores de este trabajo: Vanessa Florenza Royes (docente de Vedruna Balaguer), Roberto Rubio Nuñez (catedrático de la UAB), al programa Argò, sin el qual no habria conocido nunca este tema ni a Roberto, y finalmente a mi madre Mª Dolors Díaz Salud, todos ellos per haberme apoiado durante este trayecto. De igual forma querria dar gracias a Llum Ruiz Capdevila (docente de Vedruna Balaguer) quien ha ayudado a perfeccionar visualmente este programa."]
-frases_anglès2=["Triangle 3 points", "Complete triangle", "Complete segment", "Absolute value", "Quadrilateral 4 points", "Complete quadrilateal", "Delete results", "Agreements", "Agreements", "I would like to thank both my tutors of this work: Vanessa Florenza Royes (docent at Vedruna Balaguer), Roberto Rubio Nuñez (cathedratic at UAB), in the Argò program, without which I would never have known this topic or Roberto, and finally my mother Mª Dolors Díaz Salud, all of them for supporting me during this journey.  The same way I would want to thank Llum Ruiz Capdevila (docent at Vedruna Balaguer) who has helped to perfect this program visualy."]
-frases_alemà2=["Dreieck 3 Punkte", "Dreieck vervollständigen", "Segment vervollständigen", "Absolutwert", "Viereck 4 Punkte", "Viereck vervollständigen", "Ergebnisse löschen", "Vereinbarungen", "Vereinbarungen", "Ich möchte Ich danke meinen beiden Tutoren für diese Arbeit: Vanessa Florenza Royes (Dozentin bei Vedruna Balaguer), Roberto Rubio Nuñez (Kathedratisch bei UAB), das Argò-Programm, ohne die ich dieses Thema oder Roberto nie gekannt hätte, und schließlich meine Mutter Mª Dolors Díaz Salud, alle, die mich auf dieser Reise unterstützt haben. Genauso möchte ich mich bei Llum Ruiz Capdevila (Dozentin bei Vedruna Balaguer) bedanken, die dazu beigetragen hat, dieses Programm visuell zu perfektionieren."]
+frases_català2=["CERCLE SENSE CENTRE","TRIANGLE","VALOR ABSOLUT", "QUADRILATER","ELIMINAR RESULTATS", "AGRAIMENTS", "Agraiments", "Voldria agrair tant als meus tutors d'aquest treball: Vanessa Florenza Royes (docent de Vedruna Balaguer), Roberto Rubio Nuñez (catedràtic de la UAB), al programa Argò, sense el qual no hauria conegut mai aquest tema ni a Roberto, i finalment a ma mare Mª Dolors Díaz Salud, tots ells per haber-me apoiat durant aquest tragecte. D'igual forma voldria donar gracies a Llum Ruiz Capdevila (docent de Vedruna Balaguer) qui ha ajudat a perfeccionar visualment aquest programa."]
+frases_castellà2=["CIRCULO SIN CENTRO","TRIANGULO", "VALOR ABSOLUTO", "CUADRILATERO","ELIMINAR RESULTADOS", "ARADECIMIENTOS", "Agradecimientos", "Queria agrair tanto a mis tutores de este trabajo: Vanessa Florenza Royes (docente de Vedruna Balaguer), Roberto Rubio Nuñez (catedrático de la UAB), al programa Argò, sin el qual no habria conocido nunca este tema ni a Roberto, y finalmente a mi madre Mª Dolors Díaz Salud, todos ellos per haberme apoiado durante este trayecto. De igual forma querria dar gracias a Llum Ruiz Capdevila (docente de Vedruna Balaguer) quien ha ayudado a perfeccionar visualmente este programa."]
+frases_anglès2=["CIRCLE WITHOUT CENTER","TRIANGLE", "ABSOLUTE VALUE", "QUADRILATERAL", "DELETE RESULTS", "AGREEMENTS", "Agreements", "I would like to thank both my tutors of this work: Vanessa Florenza Royes (docent at Vedruna Balaguer), Roberto Rubio Nuñez (cathedratic at UAB), in the Argò program, without which I would never have known this topic or Roberto, and finally my mother Mª Dolors Díaz Salud, all of them for supporting me during this journey.  The same way I would want to thank Llum Ruiz Capdevila (docent at Vedruna Balaguer) who has helped to perfect this program visualy."]
+frases_alemà2=["KREIS OHNE ZENTRUM","DREIECK", "ABSOLUTWERK", "VIERECK", "ERGEBNISSE LÖSCHEN", "VEREINBARUNGEN", "Vereinbarungen", "Ich möchte Ich danke meinen beiden Tutoren für diese Arbeit: Vanessa Florenza Royes (Dozentin bei Vedruna Balaguer), Roberto Rubio Nuñez (Kathedratisch bei UAB), das Argò-Programm, ohne die ich dieses Thema oder Roberto nie gekannt hätte, und schließlich meine Mutter Mª Dolors Díaz Salud, alle, die mich auf dieser Reise unterstützt haben. Genauso möchte ich mich bei Llum Ruiz Capdevila (Dozentin bei Vedruna Balaguer) bedanken, die dazu beigetragen hat, dieses Programm visuell zu perfektionieren."]
 
 frases=frases_català1[:]
 var1=StringVar()
@@ -123,12 +123,8 @@ var7=StringVar()
 var7.set(frases[6])
 var8=StringVar()
 var8.set(frases[7])
-var9=StringVar()
-var9.set(frases[8])
-var10=StringVar()
-var10.set(frases[9])
 vari=IntVar()
-vari.set(15)
+vari.set(20)
 varia=vari.get()
 
 def change_dropdown(*args):
@@ -136,44 +132,44 @@ def change_dropdown(*args):
 	thread.start()
 	idioma_elegit=idioma.get()
 	funcions_elegides=funcions_h.get()
-	if(idioma_elegit=="Català"):
-		if(funcions_elegides=="Funcions 1"):
+	if(idioma_elegit=="CATALÀ"):
+		if(funcions_elegides=="FUNCIONS 1"):
 			frases=frases_català1[:]
-			vari.set(15)
+			vari.set(20)
 			varia=vari.get()
 		else:
 			frases=frases_català2[:]
-			vari.set(15)
+			vari.set(20)
 			varia=vari.get()
 		root.title("Geometria Hiperbòlica")
 		root2.title("Resultats")
 		root3.title("Instruccions")
-	elif(idioma_elegit=="Español"):
-		if(funcions_elegides=="Funcions 1"):
+	elif(idioma_elegit=="ESPAÑOL"):
+		if(funcions_elegides=="FUNCIONS 1"):
 			frases=frases_castellà1[:]
-			vari.set(17)
+			vari.set(20)
 			varia=vari.get()
 		else:
 			frases=frases_castellà2[:]
-			vari.set(17)
+			vari.set(20)
 			varia=vari.get()
 		root.title("Geometría Hiperbólica")
 		root2.title("Resultados")
 		root3.title("Instrucciones")
-	elif(idioma_elegit=="English"):
-		if(funcions_elegides=="Funcions 1"):
+	elif(idioma_elegit=="ENGLISH"):
+		if(funcions_elegides=="FUNCIONS 1"):
 			frases=frases_anglès1[:]
-			vari.set(17)
+			vari.set(20)
 			varia=vari.get()
 		else:
 			frases=frases_anglès2[:]
-			vari.set(17)
+			vari.set(20)
 			varia=vari.get()
 		root.title("Hiperbolic Geometry")
 		root2.title("Results")
 		root3.title("Instrucions")
-	elif(idioma_elegit=="Deutsch"):
-		if(funcions_elegides=="Funcions 1"):
+	elif(idioma_elegit=="DEUTSCH"):
+		if(funcions_elegides=="FUNCIONS 1"):
 			frases=frases_alemà1[:]
 			vari.set(20)
 			varia=vari.get()
@@ -192,14 +188,10 @@ def change_dropdown(*args):
 	var6.set(frases[5])
 	var7.set(frases[6])
 	var8.set(frases[7])
-	var9.set(frases[8])
-	var10.set(frases[9])
 	botó_recta['width']=varia
 	botó_raig['width']=varia
 	botó_segment['width']=varia
 	botó_cercle['width']=varia
-	botó_cercle_2['width']=varia
-	botó_arc['width']=varia
 	botó_eliminar['width']=varia
 	botó_info['width']=varia
 
@@ -209,7 +201,7 @@ funcions_h.trace("w", change_dropdown)
 
 def change_images(*args):
 	funcions_elegides=funcions_h.get()
-	if(funcions_elegides=="Funcions 1"):
+	if(funcions_elegides=="FUNCIONS 1"):
 		load_recta = Image.open("Imatges\\Recta.png")
 		render_recta = ImageTk.PhotoImage(load_recta)
 		img_recta = Label(myFrame, image=render_recta)
@@ -226,93 +218,69 @@ def change_images(*args):
 		render_segment = ImageTk.PhotoImage(load_segment)
 		img_segment = Label(myFrame, image=render_segment)
 		img_segment.image = render_segment
-		img_segment.grid(row=0, column=5)
+		img_segment.grid(row=1, column=1)
 
-		load_cercle = Image.open("Imatges\\Cercle.jpg")
+		load_cercle = Image.open("Imatges\\Cercle_3.jpg")
 		render_cercle = ImageTk.PhotoImage(load_cercle)
 		img_cercle = Label(myFrame, image=render_cercle)
 		img_cercle.image = render_cercle
-		img_cercle.grid(row=1, column=1)
-
-		load_cercle_2 = Image.open("Imatges\\Cercle_2.jpg")
-		render_cercle_2 = ImageTk.PhotoImage(load_cercle_2)
-		img_cercle_2 = Label(myFrame, image=render_cercle_2)
-		img_cercle_2.image = render_cercle_2
-		img_cercle_2.grid(row=1, column=3)
-
-		load_arc = Image.open("Imatges\\Cercle_3.jpg")
-		render_arc = ImageTk.PhotoImage(load_arc)
-		img_arc = Label(myFrame, image=render_arc)
-		img_arc.image = render_arc
-		img_arc.grid(row=1, column=5)
+		img_cercle.grid(row=1, column=3)
 
 		load_basura = Image.open("Imatges\\Eliminar.png")
 		render_basura = ImageTk.PhotoImage(load_basura)
 		img_basura = Label(myFrame, image=render_basura)
 		img_basura.image = render_basura
-		img_basura.grid(row=0, column=7)
+		img_basura.grid(row=0, column=5)
 
 		load_info = Image.open("Imatges\\Informació.png")
 		render_info = ImageTk.PhotoImage(load_info)
 		img_info = Label(myFrame, image=render_info)
 		img_info.image = render_info
-		img_info.grid(row=1, column=7)
+		img_info.grid(row=1, column=5)
 
-		os.chdir("C:\\Users\\USUARIO\\Documents\\Hiperbolic Geometry\\Imatges")
+		os.chdir("Imatges")
 		botó_info.config(cursor="@Question_Mark.cur")
-		os.chdir("C:\\Users\\USUARIO\\Documents\\Hiperbolic Geometry")
+		os.chdir(filedir)
 	else:
-		load_recta = Image.open("Imatges\\Triangle.jpg")
+		load_recta = Image.open("Imatges\\Cercle_2.jpg")
 		render_recta = ImageTk.PhotoImage(load_recta)
 		img_recta = Label(myFrame, image=render_recta)
 		img_recta.image = render_recta
 		img_recta.grid(row=0, column=1)
 
-		load_semirecta = Image.open("Imatges\\Triangle_2.jpg")
+		load_semirecta = Image.open("Imatges\\Abs_x.jpg")
 		render_semirecta = ImageTk.PhotoImage(load_semirecta)
 		img_semirecta = Label(myFrame, image=render_semirecta)
 		img_semirecta.image = render_semirecta
-		img_semirecta.grid(row=0, column=3)
+		img_semirecta.grid(row=1, column=1)
 
-		load_segment = Image.open("Imatges\\Segment_2.jpg")
-		render_segment = ImageTk.PhotoImage(load_segment)
-		img_segment = Label(myFrame, image=render_segment)
-		img_segment.image = render_segment
-		img_segment.grid(row=0, column=5)
+		load_cercle_2 = Image.open("Imatges\\Triangle_2.jpg")
+		render_cercle_2 = ImageTk.PhotoImage(load_cercle_2)
+		img_cercle_2 = Label(myFrame, image=render_cercle_2)
+		img_cercle_2.image = render_cercle_2
+		img_cercle_2.grid(row=0, column=3)
 
-		load_cercle = Image.open("Imatges\\Abs_x.jpg")
-		render_cercle = ImageTk.PhotoImage(load_cercle)
-		img_cercle = Label(myFrame, image=render_cercle)
-		img_cercle.image = render_cercle
-		img_cercle.grid(row=1, column=1)
-
-		load_cercle_2 = Image.open("Imatges\\Quadrat.jpg")
+		load_cercle_2 = Image.open("Imatges\\Quadrat_2.jpg")
 		render_cercle_2 = ImageTk.PhotoImage(load_cercle_2)
 		img_cercle_2 = Label(myFrame, image=render_cercle_2)
 		img_cercle_2.image = render_cercle_2
 		img_cercle_2.grid(row=1, column=3)
 
-		load_arc = Image.open("Imatges\\Quadrat_2.jpg")
-		render_arc = ImageTk.PhotoImage(load_arc)
-		img_arc = Label(myFrame, image=render_arc)
-		img_arc.image = render_arc
-		img_arc.grid(row=1, column=5)
-
 		load_basura = Image.open("Imatges\\Eliminar_2.jpg")
 		render_basura = ImageTk.PhotoImage(load_basura)
 		img_basura = Label(myFrame, image=render_basura)
 		img_basura.image = render_basura
-		img_basura.grid(row=0, column=7)
+		img_basura.grid(row=0, column=5)
 
 		load_info = Image.open("Imatges\\Gràcies.jpg")
 		render_info = ImageTk.PhotoImage(load_info)
 		img_info = Label(myFrame, image=render_info)
 		img_info.image = render_info
-		img_info.grid(row=1, column=7)
+		img_info.grid(row=1, column=5)
 
-		os.chdir("C:\\Users\\USUARIO\\Documents\\Hiperbolic Geometry\\Imatges")
+		os.chdir("Imatges")
 		botó_info.config(cursor="@Heart.cur")
-		os.chdir("C:\\Users\\USUARIO\\Documents\\Hiperbolic Geometry")
+		os.chdir(filedir)
 
 funcions_h.trace("w", change_images)
 
@@ -323,6 +291,9 @@ root.counter2=0
 root.false=True
 
 root.false2=True
+
+file = os.path.join(os.getcwd(), os.listdir(os.getcwd())[0])
+filedir=os.path.dirname(file)
 
 #----Imatges dels botons----
 
@@ -342,21 +313,15 @@ load_segment = Image.open("Imatges\\Segment.jpg")
 render_segment = ImageTk.PhotoImage(load_segment)
 img_segment = Label(myFrame, image=render_segment)
 img_segment.image = render_segment
-img_segment.grid(row=0, column=5)
+img_segment.grid(row=1, column=1)
 
-load_cercle = Image.open("Imatges\\Cercle.jpg")
+load_cercle = Image.open("Imatges\\Cercle_3.jpg")
 render_cercle = ImageTk.PhotoImage(load_cercle)
 img_cercle = Label(myFrame, image=render_cercle)
 img_cercle.image = render_cercle
-img_cercle.grid(row=1, column=1)
+img_cercle.grid(row=1, column=3)
 
-load_cercle_2 = Image.open("Imatges\\Cercle_2.jpg")
-render_cercle_2 = ImageTk.PhotoImage(load_cercle_2)
-img_cercle_2 = Label(myFrame, image=render_cercle_2)
-img_cercle_2.image = render_cercle_2
-img_cercle_2.grid(row=1, column=3)
-
-load_arc = Image.open("Imatges\\Cercle_3.jpg")
+load_arc = Image.open("Imatges\\Triangle.jpg")
 render_arc = ImageTk.PhotoImage(load_arc)
 img_arc = Label(myFrame, image=render_arc)
 img_arc.image = render_arc
@@ -366,13 +331,13 @@ load_basura = Image.open("Imatges\\Eliminar.png")
 render_basura = ImageTk.PhotoImage(load_basura)
 img_basura = Label(myFrame, image=render_basura)
 img_basura.image = render_basura
-img_basura.grid(row=0, column=7)
+img_basura.grid(row=0, column=5)
 
 load_info = Image.open("Imatges\\Informació.png")
 render_info = ImageTk.PhotoImage(load_info)
 img_info = Label(myFrame, image=render_info)
 img_info.image = render_info
-img_info.grid(row=1, column=7)
+img_info.grid(row=1, column=5)
 
 #----Funcions----
 
@@ -380,13 +345,13 @@ def recta_h():
 	for ele in root3.winfo_children():
 		ele.destroy()
 	idioma_elegit=idioma.get()
-	if(idioma_elegit=="Català"):
+	if(idioma_elegit=="CATALÀ"):
 		info_recta=Label(root3, text="Per usar la recta feu clic als dos punts del disc desitjats i a continuació feu clic al botó de crear rectes.")
-	elif(idioma_elegit=="Español"):
+	elif(idioma_elegit=="ESPAÑOL"):
 		info_recta=Label(root3, text="Para usar la recta haced clic a los dos puntos del disco deseados y a continuación haced clic al botón de crear rectas.")
-	elif(idioma_elegit=="English"):
+	elif(idioma_elegit=="ENGLISH"):
 		info_recta=Label(root3, text="To use the line do click at the two desired points of the disk and then click the button to create lines.")
-	elif(idioma_elegit=="Deutsch"):
+	elif(idioma_elegit=="DEUTSCH"):
 		info_recta=Label(root3, text="Um die Linie zu verwenden, klicken Sie auf die beiden gewünschten Punkte der Scheibe und dann auf die Schaltfläche, um Linien zu erstellen.")
 	info_recta.pack()
 	if(root.false2==True):
@@ -446,16 +411,16 @@ def semirecta_h():
 	for ele in root3.winfo_children():
 		ele.destroy()
 	idioma_elegit=idioma.get()
-	if(idioma_elegit=="Català"):
+	if(idioma_elegit=="CATALÀ"):
 		info_semirecta=Label(root3, text='''Per usar la semiectarecta feu clic als dos punts del disc desitjats, sabent que la semirecta es dibuixara
  en sentit del primer al segon clic, i a continuació feu clic al botó de crear semirectes. ''')
-	elif(idioma_elegit=="Español"):
+	elif(idioma_elegit=="ESPAÑOL"):
 		info_semirecta=Label(root3, text='''Para usar la semirecta haced clic a los dos puntos del disco deseados, sabiendo que la semirecta se dibujara
  en sentido del primer al segundo clic, y a continuación haced clic al botón de crear rectas. ''')
-	elif(idioma_elegit=="English"):
+	elif(idioma_elegit=="ENGLISH"):
 		info_semirecta=Label(root3, text='''To use the ray do click at the two desired points of the disk, knowing that the ray will be created
  in the sense of the first to the second click, and then click the button to create rays. ''')
-	elif(idioma_elegit=="Deutsch"):
+	elif(idioma_elegit=="DEUTSCH"):
 		info_semirecta=Label(root3, text='''Um den Strahl zu verwenden, klicken Sie auf die beiden gewünschten Punkte auf der Scheibe, wobei Sie wissen,
  dass der Strahl im Sinne des ersten bis zweiten Klicks erstellt wird, und klicken Sie dann auf die Schaltfläche,
  um Strahlen zu erstellen. ''')
@@ -598,13 +563,13 @@ def segment_h():
 		for ele in root3.winfo_children():
 				ele.destroy()
 		idioma_elegit=idioma.get()
-		if(idioma_elegit=="Català"):
+		if(idioma_elegit=="CATALÀ"):
 			info_segment=Label(root3, text="Per usar el segment feu clic als dos punts del disc desitjats i a continuació feu clic al botó de crear segments.")
-		elif(idioma_elegit=="Español"):
+		elif(idioma_elegit=="ESPAÑOL"):
 			info_segment=Label(root3, text="Para usar el segmento haced clic a los dos puntos del disco deseados y a continuación haced clic al botón de crear segmentos.")
-		elif(idioma_elegit=="English"):
+		elif(idioma_elegit=="ENGLISH"):
 			info_segment=Label(root3, text="To use the segment do click at the two desired points of the disk and then click the button to create segments.")
-		elif(idioma_elegit=="Deutsch"):
+		elif(idioma_elegit=="DEUTSCH"):
 			info_segment=Label(root3, text="Um das Segment zu verwenden, klicken Sie auf die beiden gewünschten Punkte der Scheibe und dann auf die Schaltfläche, um Segmente zu erstellen.")
 		info_segment.pack()
 	if(root.false2==False):
@@ -731,16 +696,16 @@ def cercle_h():
 	for ele in root3.winfo_children():
 		ele.destroy()
 	idioma_elegit=idioma.get()
-	if(idioma_elegit=="Català"):
+	if(idioma_elegit=="CATALÀ"):
 		info_cercle=Label(root3, text='''Per usar el cercle feu clic als dos punts del disc desitjats, el primer sera el centre
  i el segon un punt de la circumferencia, i a continuació feu clic al botó de crear cercles.''')
-	elif(idioma_elegit=="Español"):
+	elif(idioma_elegit=="ESPAÑOL"):
 		info_cercle=Label(root3, text='''Para usar el circulo haced clic a los dos puntos del disco deseados, el primero sera el centro
  y el segundo un punto de la circumferencia, y a continuación haced clic al botón de crear circulos.''')
-	elif(idioma_elegit=="English"):
+	elif(idioma_elegit=="ENGLISH"):
 		info_cercle=Label(root3, text='''To use the circle do click at the two desired points of the disk, the first will be the center
  and the second a point of the circle, and then click the button to create circles.''')
-	elif(idioma_elegit=="Deutsch"):
+	elif(idioma_elegit=="DEUTSCH"):
 		info_cercle=Label(root3, text='''Um den Kreis zu verwenden, klicken Sie auf die beiden gewünschten Punkte der Scheibe. Der erste ist die Mitte
  vund der zweite ein Punkt des Kreises, und klicken Sie dann auf die Schaltfläche, um Kreisen zu erstellen.''')
 	info_cercle.pack()
@@ -841,16 +806,16 @@ def cercle_2_h():
 	for ele in root3.winfo_children():
 		ele.destroy()
 	idioma_elegit=idioma.get()
-	if(idioma_elegit=="Català"):
+	if(idioma_elegit=="CATALÀ"):
 		info_cercle_2=Label(root3, text='''Per usar el cercle feu clic als tres punts del disc desitjats per on passara el cercle
  i a continuació feu clic al botó de crear cercles amb 3 punts.''')
-	elif(idioma_elegit=="Español"):
+	elif(idioma_elegit=="ESPAÑOL"):
 		info_cercle_2=Label(root3, text='''Para usar el circulo haced clic a los tres puntos del disco deseados por donde passara el circulo
  y a continuación haced clic al botón de crear circulos con 3 puntos.''')
-	elif(idioma_elegit=="English"):
+	elif(idioma_elegit=="ENGLISH"):
 		info_cercle_2=Label(root3, text='''To use the circle do click at the three desired points of the disk through which the circle will pass
  and then click the button to create circles with 3 points.''')
-	elif(idioma_elegit=="Deutsch"):
+	elif(idioma_elegit=="DEUTSCH"):
 		info_cercle_2=Label(root3, text='''Um den Kreis zu verwenden, klicken Sie auf die drei gewünschten Punkte der Scheibe, durch die der Kreis wird durch sie gehen
  Klicken Sie dann auf die Schaltfläche, um Kreise mit 3 Punkten zu erstellen.''')
 	info_cercle_2.pack()
@@ -906,13 +871,13 @@ def triangle_h():
 	for ele in root3.winfo_children():
 			ele.destroy()
 	idioma_elegit=idioma.get()
-	if(idioma_elegit=="Català"):
+	if(idioma_elegit=="CATALÀ"):
 		info_segment=Label(root3, text="Per usar el triangle feu clic als tres punts del disc desitjats i a continuació feu clic al botó de crear triangles.")
-	elif(idioma_elegit=="Español"):
+	elif(idioma_elegit=="ESPAÑOL"):
 		info_segment=Label(root3, text="Para usar el triangulo haced clic a los tres puntos del disco deseados y a continuación haced clic al botón de crear triangulos.")
-	elif(idioma_elegit=="English"):
+	elif(idioma_elegit=="ENGLISH"):
 		info_segment=Label(root3, text="To use the triangle do click at the three desired points of the disk and then click the button to create triangles.")
-	elif(idioma_elegit=="Deutsch"):
+	elif(idioma_elegit=="DEUTSCH"):
 		info_segment=Label(root3, text="Um das Dreieck zu verwenden, klicken Sie auf die drei gewünschten Punkte der Scheibe und dann auf die Schaltfläche, um Dreiecke zu erstellen.")
 	info_segment.pack()
 	root.false=False
@@ -950,16 +915,16 @@ def triangle_h():
 def distancia_h(print_d,cercle):
 	u1,u2,v1,v2=root2.u1,root2.u2,root2.v1,root2.v2
 	idioma_elegit=idioma.get()
-	if(idioma_elegit=="Català"):
+	if(idioma_elegit=="CATALÀ"):
 		escrit1="El radi és: "
 		escrit2="La distancia hiperbòlica és: "
-	elif(idioma_elegit=="Español"):
+	elif(idioma_elegit=="ESPAÑOL"):
 		escrit1="El radio es: "
 		escrit2="La distancía hiperbólica es: "
-	elif(idioma_elegit=="English"):
+	elif(idioma_elegit=="ENGLISH"):
 		escrit1="The radius is: "
 		escrit2="The hiperbolic distance is: "
-	elif(idioma_elegit=="Deutsch"):
+	elif(idioma_elegit=="DEUTSCH"):
 		escrit1="Der Radius ist: "
 		escrit2="Der hyperbolische Abstand beträgt: "
 	u1=(u1-300)/300
@@ -1104,22 +1069,22 @@ def area_h(print_d):
 		else:
 			area=str(area)
 		idioma_elegit=idioma.get()
-		if(idioma_elegit=="Català"):
+		if(idioma_elegit=="CATALÀ"):
 			text_a="L'angule A és: "+str(A*180/math.pi)
 			text_b="L'angule B és: "+str(B*180/math.pi)
 			text_c="L'angule C és: "+str(C*180/math.pi)
 			text_d="L'àrea és: "+area
-		elif(idioma_elegit=="Español"):
+		elif(idioma_elegit=="ESPAÑOL"):
 			text_a="El angulo A es: "+str(A*180/math.pi)
 			text_b="El angulo B es: "+str(B*180/math.pi)
 			text_c="El angulo C es: "+str(C*180/math.pi)
 			text_d="El area es: "+area
-		elif(idioma_elegit=="English"):
+		elif(idioma_elegit=="ENGLISH"):
 			text_a="The angle A is: "+str(A*180/math.pi)
 			text_b="The angle B is: "+str(B*180/math.pi)
 			text_c="The angle C is: "+str(C*180/math.pi)
 			text_d="The area is: "+area
-		elif(idioma_elegit=="Deutsch"):
+		elif(idioma_elegit=="DEUTSCH"):
 			text_a="Der Winkel A ist: "+str(A*180/math.pi)
 			text_b="Der Winkel B ist: "+str(B*180/math.pi)
 			text_c="Der Winkel C ist: "+str(C*180/math.pi)
@@ -1139,13 +1104,13 @@ def triangle_h_full():
 	for ele in root3.winfo_children():
 			ele.destroy()
 	idioma_elegit=idioma.get()
-	if(idioma_elegit=="Català"):
+	if(idioma_elegit=="CATALÀ"):
 		info_segment=Label(root3, text="Per usar el triangle feu clic als tres punts del disc desitjats i a continuació feu clic al botó de crear triangles.")
-	elif(idioma_elegit=="Español"):
+	elif(idioma_elegit=="ESPAÑOL"):
 		info_segment=Label(root3, text="Para usar el triangulo haced clic a los tres puntos del disco deseados y a continuación haced clic al botón de crear triangulos.")
-	elif(idioma_elegit=="English"):
+	elif(idioma_elegit=="ENGLISH"):
 		info_segment=Label(root3, text="To use the triangle do click at the three desired points of the disk and then click the button to create triangles.")
-	elif(idioma_elegit=="Deutsch"):
+	elif(idioma_elegit=="DEUTSCH"):
 		info_segment=Label(root3, text="Um das Dreieck zu verwenden, klicken Sie auf die drei gewünschten Punkte der Scheibe und dann auf die Schaltfläche, um Dreiecke zu erstellen.")
 	info_segment.pack()
 	triangle_h()
@@ -1163,13 +1128,13 @@ def segment_h_full():
 	for ele in root3.winfo_children():
 		ele.destroy()
 	idioma_elegit=idioma.get()
-	if(idioma_elegit=="Català"):
+	if(idioma_elegit=="CATALÀ"):
 		info_segment=Label(root3, text="Per usar el segment feu clic als dos punts del disc desitjats i a continuació feu clic al botó de crear segments.")
-	elif(idioma_elegit=="Español"):
+	elif(idioma_elegit=="ESPAÑOL"):
 		info_segment=Label(root3, text="Para usar el segmento haced clic a los dos puntos del disco deseados y a continuación haced clic al botón de crear segmentos.")
-	elif(idioma_elegit=="English"):
+	elif(idioma_elegit=="ENGLISH"):
 		info_segment=Label(root3, text="To use the segment do click at the two desired points of the disk and then click the button to create segments.")
-	elif(idioma_elegit=="Deutsch"):
+	elif(idioma_elegit=="DEUTSCH"):
 			info_segment=Label(root3, text="Um das Segment zu verwenden, klicken Sie auf die beiden gewünschten Punkte der Scheibe und dann auf die Schaltfläche, um Segmente zu erstellen.")
 	info_segment.pack()
 	if(root.false2==True):
@@ -1191,13 +1156,13 @@ def perimetre_cercle():
 	idioma_elegit=idioma.get()
 	if(perimetre==math.inf):
 		perimetre="∞"
-	if(idioma_elegit=="Català"):
+	if(idioma_elegit=="CATALÀ"):
 		text_peri="El perimetre és: "+str(perimetre)
-	elif(idioma_elegit=="Español"):
+	elif(idioma_elegit=="ESPAÑOL"):
 		text_peri="El perimetro es: "+str(perimetre)
-	elif(idioma_elegit=="English"):
+	elif(idioma_elegit=="ENGLISH"):
 		text_peri="The circumference is: "+str(perimetre)
-	elif(idioma_elegit=="Deutsch"):
+	elif(idioma_elegit=="DEUTSCH"):
 		text_peri="Der Umfang ist: "+str(perimetre)
 	label_peri=Label(root2, text=text_peri, width=50)
 	label_peri.pack(expand=1)
@@ -1207,13 +1172,13 @@ def area_cercle():
 	idioma_elegit=idioma.get()
 	if(area==math.inf):
 		area="∞"
-	if(idioma_elegit=="Català"):
+	if(idioma_elegit=="CATALÀ"):
 		text_a_c="L'àrea és: "+str(area)
-	elif(idioma_elegit=="Español"):
+	elif(idioma_elegit=="ESPAÑOL"):
 		text_a_c="El area es: "+str(area)
-	elif(idioma_elegit=="English"):
+	elif(idioma_elegit=="ENGLISH"):
  		text_a_c="The area is: "+str(area)
-	elif(idioma_elegit=="Deutsch"):
+	elif(idioma_elegit=="DEUTSCH"):
  		text_a_c="Das Gebiet ist: "+str(area)
 	label_a_c=Label(root2, text=text_a_c, width=50)
 	label_a_c.pack(expand=1)
@@ -1222,16 +1187,16 @@ def cercle_h_full():
 	for ele in root3.winfo_children():
 		ele.destroy()
 	idioma_elegit=idioma.get()
-	if(idioma_elegit=="Català"):
+	if(idioma_elegit=="CATALÀ"):
 		info_cercle=Label(root3, text='''Per usar el cercle feu clic als dos punts del disc desitjats, el primer sera el centre
  i el segon un punt de la circumferencia, i a continuació feu clic al botó de crear cercles.''')
-	elif(idioma_elegit=="Español"):
+	elif(idioma_elegit=="ESPAÑOL"):
 		info_cercle=Label(root3, text='''Para usar el circulo haced clic a los dos puntos del disco deseados, el primero sera el centro
  y el segundo un punto de la circumferencia, y a continuación haced clic al botón de crear circulos.''')
-	elif(idioma_elegit=="English"):
+	elif(idioma_elegit=="ENGLISH"):
 		info_cercle=Label(root3, text='''To use the circle do click at the two desired points of the disk, the first will be the center
  and the second a point of the circle, and then click the button to create segments.''')
-	elif(idioma_elegit=="Deutsch"):
+	elif(idioma_elegit=="DEUTSCH"):
 		info_cercle=Label(root3, text='''Um den Kreis zu verwenden, klicken Sie auf die beiden gewünschten Punkte der Scheibe. Der erste ist die Mitte
  vund der zweite ein Punkt des Kreises, und klicken Sie dann auf die Schaltfläche, um Kreisen zu erstellen.''')
 	info_cercle.pack()
@@ -1257,25 +1222,25 @@ def eliminar():
 
 def info():
 	idioma_elegit=idioma.get()
-	if(idioma_elegit=="Català"):
-		messagebox.showinfo(frases_català1[8], frases_català1[9])
-	elif(idioma_elegit=="Español"):
-		messagebox.showinfo(frases_castellà1[8], frases_castellà1[9])
-	elif(idioma_elegit=="English"):
-		messagebox.showinfo(frases_anglès1[8], frases_anglès1[9])
-	elif(idioma_elegit=="Deutsch"):
-		messagebox.showinfo(frases_alemà1[8], frases_alemà1[9])
+	if(idioma_elegit=="CATALÀ"):
+		messagebox.showinfo(frases_català1[6], frases_català1[7])
+	elif(idioma_elegit=="ESPAÑOL"):
+		messagebox.showinfo(frases_castellà1[6], frases_castellà1[7])
+	elif(idioma_elegit=="ENGLISH"):
+		messagebox.showinfo(frases_anglès1[6], frases_anglès1[7])
+	elif(idioma_elegit=="DEUTSCH"):
+		messagebox.showinfo(frases_alemà1[6], frases_alemà1[7])
 
 def agrair():
 	idioma_elegit=idioma.get()
-	if(idioma_elegit=="Català"):
-		messagebox.showinfo(frases_català2[8], frases_català2[9])
-	elif(idioma_elegit=="Español"):
-		messagebox.showinfo(frases_castellà2[8], frases_castellà2[9])
-	elif(idioma_elegit=="English"):
-		messagebox.showinfo(frases_anglès2[8], frases_anglès2[9])
-	elif(idioma_elegit=="Deutsch"):
-		messagebox.showinfo(frases_alemà2[8], frases_alemà2[9])
+	if(idioma_elegit=="CATALÀ"):
+		messagebox.showinfo(frases_català2[6], frases_català2[7])
+	elif(idioma_elegit=="ESPAÑOL"):
+		messagebox.showinfo(frases_castellà2[6], frases_castellà2[7])
+	elif(idioma_elegit=="ENGLISH"):
+		messagebox.showinfo(frases_anglès2[6], frases_anglès2[7])
+	elif(idioma_elegit=="DEUTSCH"):
+		messagebox.showinfo(frases_alemà2[6], frases_alemà2[7])
 
 def eliminar_resultats():
 	for ele in root2.winfo_children():
@@ -1286,16 +1251,16 @@ def abs_x():
 	for ele in root3.winfo_children():
 		ele.destroy()
 	idioma_elegit=idioma.get()
-	if(idioma_elegit=="Català"):
+	if(idioma_elegit=="CATALÀ"):
 		info_recta=Label(root3, text='''Per usar la recta en valor absolut feu clic als dos punts del disc desitjats
  i a continuació feu clic al botó de crear rectes en valor absolut.''')
-	elif(idioma_elegit=="Español"):
+	elif(idioma_elegit=="ESPAÑOL"):
 		info_recta=Label(root3, text='''Para usar la recta en valor absoluto haced clic a los dos puntos del disco deseados
  y a continuación haced clic al botón de crear rectas en valor absoluto.''')
-	elif(idioma_elegit=="English"):
+	elif(idioma_elegit=="ENGLISH"):
 		info_recta=Label(root3, text='''To use the line in absolute value do click at the two desired points of the disk
  and then click the button to create lines in absolute value.''')
-	elif(idioma_elegit=="Deutsch"):
+	elif(idioma_elegit=="DEUTSCH"):
 		info_recta=Label(root3, text='''Um die Linie in absoluten Wert zu verwenden, klicken Sie auf die beiden gewünschten Punkte der Scheibe
  Klicken Sie dann auf die Schaltfläche, um Linien in absoluten Werten zu erstellen.''')
 	info_recta.pack()
@@ -1403,13 +1368,13 @@ def quadrat_h():
 	for ele in root3.winfo_children():
 		ele.destroy()
 	idioma_elegit=idioma.get()
-	if(idioma_elegit=="Català"):
+	if(idioma_elegit=="CATALÀ"):
 		info_recta=Label(root3, text="Per usar el quadrilater feu clic als 4 punts del disc desitjats i a continuació feu clic al botó de crear quadrilaters.")
-	elif(idioma_elegit=="Español"):
+	elif(idioma_elegit=="ESPAÑOL"):
 		info_recta=Label(root3, text="Para usar el cuadrilatero haced clic a los 4 puntos del disco deseados y a continuación haced clic al botón de crear cuadrilateros.")
-	elif(idioma_elegit=="English"):
+	elif(idioma_elegit=="ENGLISH"):
 		info_recta=Label(root3, text="To use the quadrilateral do click at the 4 desired points of the disk and then click the button to create quadrilaterals.")
-	elif(idioma_elegit=="Deutsch"):
+	elif(idioma_elegit=="DEUTSCH"):
 		info_recta=Label(root3, text="Um das Viereck zu verwenden, klicken Sie auf die 4 gewünschten Punkte der Scheibe und dann auf die Schaltfläche, um Vierecke zu erstellen.")
 	info_recta.pack()
 	u1,u2,v1,v2,w1,w2,y1,y2=root.u1,root.u2,root.v1,root.v2,root.w1,root.w2,root.y1,root.y2
@@ -1430,13 +1395,13 @@ def quadrat_h_full():
 	for ele in root3.winfo_children():
 		ele.destroy()
 	idioma_elegit=idioma.get()
-	if(idioma_elegit=="Català"):
+	if(idioma_elegit=="CATALÀ"):
 		info_recta=Label(root3, text="Per usar el quadrilater feu clic als 4 punts del disc desitjats i a continuació feu clic al botó de crear quadrilaters.")
-	elif(idioma_elegit=="Español"):
+	elif(idioma_elegit=="ESPAÑOL"):
 		info_recta=Label(root3, text="Para usar el cuadrilatero haced clic a los 4 puntos del disco deseados y a continuación haced clic al botón de crear quadrilateros.")
-	elif(idioma_elegit=="English"):
+	elif(idioma_elegit=="ENGLISH"):
 		info_recta=Label(root3, text="To use the quadrilateral do click at the 4 desired points of the disk and then click the button to create quadrilaterals.")
-	elif(idioma_elegit=="Deutsch"):
+	elif(idioma_elegit=="DEUTSCH"):
 		info_recta=Label(root3, text="Um das Viereck zu verwenden, klicken Sie auf die 4 gewünschten Punkte der Scheibe und dann auf die Schaltfläche, um Vierecke zu erstellen.")
 	info_recta.pack()
 	root.false2=False
@@ -1466,19 +1431,19 @@ def quadrat_h_full():
 	else:
 		area_t=str(area_t)
 	idioma_elegit=idioma.get()
-	if(idioma_elegit=="Català"):
+	if(idioma_elegit=="CATALÀ"):
 		text_a="L'angule A és: "+str(A*180/math.pi)
 		text_b="L'angule B és: "+str(B*180/math.pi)
 		text_c="L'angule C és: "+str(C*180/math.pi)
 		text_d="L'angule D és: "+str(D*180/math.pi)
 		text_e="L'àrea és: "+area_t
-	elif(idioma_elegit=="Español"):
+	elif(idioma_elegit=="ESPAÑOL"):
 		text_a="El angulo A es: "+str(A*180/math.pi)
 		text_b="El angulo B es: "+str(B*180/math.pi)
 		text_c="El angulo C es: "+str(C*180/math.pi)
 		text_d="El angulo D es: "+str(D*180/math.pi)
 		text_e="El area es: "+area_t
-	elif(idioma_elegit=="Deutsch"):
+	elif(idioma_elegit=="DEUTSCH"):
 		text_a="The angle A is: "+str(A*180/math.pi)
 		text_b="The angle B is: "+str(B*180/math.pi)
 		text_c="The angle C is: "+str(C*180/math.pi)
@@ -1537,96 +1502,74 @@ disc.bind("<Button-1>", click)
 def a_h():
 	winsound.PlaySound("Sons\\Botò", winsound.SND_FILENAME)
 	funcions_elegides=funcions_h.get()
-	if(funcions_elegides=="Funcions 1"):
+	if(funcions_elegides=="FUNCIONS 1"):
 		recta_h()
-	elif(funcions_elegides=="Funcions 2"):
-		triangle_h()
+	elif(funcions_elegides=="FUNCIONS 2"):
+		cercle_2_h()
 
 def b_h():
 	winsound.PlaySound("Sons\\Botò", winsound.SND_FILENAME)
 	funcions_elegides=funcions_h.get()
-	if(funcions_elegides=="Funcions 1"):
+	if(funcions_elegides=="FUNCIONS 1"):
 		semirecta_h()
-	elif(funcions_elegides=="Funcions 2"):
+	elif(funcions_elegides=="FUNCIONS 2"):
 		triangle_h_full()
 
 def c_h():
 	winsound.PlaySound("Sons\\Botò", winsound.SND_FILENAME)
 	funcions_elegides=funcions_h.get()
-	if(funcions_elegides=="Funcions 1"):
-		segment_h()
-	elif(funcions_elegides=="Funcions 2"):
+	if(funcions_elegides=="FUNCIONS 1"):
 		segment_h_full()
+	elif(funcions_elegides=="FUNCIONS 2"):
+		abs_x()
 
 def d_h():
 	winsound.PlaySound("Sons\\Botò", winsound.SND_FILENAME)
 	funcions_elegides=funcions_h.get()
-	if(funcions_elegides=="Funcions 1"):
-		cercle_h()
-	elif(funcions_elegides=="Funcions 2"):
-		abs_x()
+	if(funcions_elegides=="FUNCIONS 1"):
+		cercle_h_full()
+	elif(funcions_elegides=="FUNCIONS 2"):
+		quadrat_h_full()
 
 def e_h():
 	winsound.PlaySound("Sons\\Botò", winsound.SND_FILENAME)
 	funcions_elegides=funcions_h.get()
-	if(funcions_elegides=="Funcions 1"):
-		cercle_2_h()
-	elif(funcions_elegides=="Funcions 2"):
-		quadrat_h()
+	if(funcions_elegides=="FUNCIONS 1"):
+		eliminar()
+	elif(funcions_elegides=="FUNCIONS 2"):
+		eliminar_resultats()
 
 def f_h():
 	winsound.PlaySound("Sons\\Botò", winsound.SND_FILENAME)
 	funcions_elegides=funcions_h.get()
-	if(funcions_elegides=="Funcions 1"):
-		cercle_h_full()
-	elif(funcions_elegides=="Funcions 2"):
-		quadrat_h_full()
-
-def g_h():
-	winsound.PlaySound("Sons\\Botò", winsound.SND_FILENAME)
-	funcions_elegides=funcions_h.get()
-	if(funcions_elegides=="Funcions 1"):
-		eliminar()
-	elif(funcions_elegides=="Funcions 2"):
-		eliminar_resultats()
-
-def h_h():
-	winsound.PlaySound("Sons\\Botò", winsound.SND_FILENAME)
-	funcions_elegides=funcions_h.get()
-	if(funcions_elegides=="Funcions 1"):
+	if(funcions_elegides=="FUNCIONS 1"):
 		info()
-	elif(funcions_elegides=="Funcions 2"):
+	elif(funcions_elegides=="FUNCIONS 2"):
 		agrair()
 
 #----Botons----
 
-botó_recta=Button(myFrame,textvariable=var1, fg="red", bg="#875F5F", activebackground="red", activeforeground="#875F5F", width=15, cursor="hand2", command=a_h)
+botó_recta=Button(myFrame,textvariable=var1, fg="red", bg="black", activebackground="red", activeforeground="black", width=20, cursor="hand2", command=a_h)
 botó_recta.grid(row=0, column=2 )
 
-botó_raig=Button(myFrame,textvariable=var2, fg="#FF9700", bg="#80715B", activebackground="#FF9700", activeforeground="#80715B", width=15, cursor="hand2", command=b_h)
+botó_raig=Button(myFrame,textvariable=var2, fg="#FF9700", bg="black", activebackground="#FF9700", activeforeground="black", width=20, cursor="hand2", command=b_h)
 botó_raig.grid(row=0, column=4)
 
-botó_segment=Button(myFrame,textvariable=var3, fg="#FFEC00", bg="#7E8041", activebackground="#FFEC00", activeforeground="#7E8041", width=15, cursor="hand2", command=c_h)
-botó_segment.grid(row=0, column=6)
+botó_segment=Button(myFrame,textvariable=var3, fg="#1EB700", bg="black", activebackground="#1EB700", activeforeground="black", width=20, cursor="hand2", command=c_h)
+botó_segment.grid(row=1, column=2)
 
-botó_cercle=Button(myFrame,textvariable=var4, fg="#00FBFF", bg="#547E81", activebackground="#00FBFF", activeforeground="#547E81", width=15, cursor="hand2", command=d_h)
-botó_cercle.grid(row=1, column=2)
+botó_cercle=Button(myFrame,textvariable=var4, fg="#00FBFF", bg="black", activebackground="#00FBFF", activeforeground="black", width=20, cursor="hand2", command=d_h)
+botó_cercle.grid(row=1, column=4)
 
-botó_cercle_2=Button(myFrame,textvariable=var5, fg="#002BFF", bg="#454D79", activebackground="#002BFF", activeforeground="#454D79", width=15, cursor="hand2", command=e_h)
-botó_cercle_2.grid(row=1, column=4)
+os.chdir("Imatges")
 
-botó_arc=Button(myFrame,textvariable=var6, fg="#9700FF", bg="#694483", activebackground="#9700FF", activeforeground="#694483", width=15, cursor="hand2", command=f_h)
-botó_arc.grid(row=1, column=6)
+botó_eliminar=Button(myFrame,textvariable=var5, fg="#FFEC00", bg="black", activebackground="#FFEC00", activeforeground="black", width=20, cursor="@Trash.cur", command=e_h)
+botó_eliminar.grid(row=0, column=6)
 
-os.chdir("C:\\Users\\USUARIO\\Documents\\Hiperbolic Geometry\\Imatges")
+botó_info=Button(myFrame,textvariable=var6, fg="#D500FF", bg="black", activebackground="#D500FF", activeforeground="black", width=20, cursor="@Question_Mark.cur", command=f_h)
+botó_info.grid(row=1, column=6)
 
-botó_eliminar=Button(myFrame,textvariable=var7, fg="#1EB700", bg="#406F36", activebackground="#1EB700", activeforeground="#406F36", width=15, cursor="@Trash.cur", command=g_h)
-botó_eliminar.grid(row=0, column=8)
-
-botó_info=Button(myFrame,textvariable=var8, fg="#D500FF", bg="#65386E", activebackground="#D500FF", activeforeground="#65386E", width=15, cursor="@Question_Mark.cur", command=h_h)
-botó_info.grid(row=1, column=8)
-
-os.chdir("C:\\Users\\USUARIO\\Documents\\Hiperbolic Geometry")
+os.chdir(filedir)
 
 #----Final----
 

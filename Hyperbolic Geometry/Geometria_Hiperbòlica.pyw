@@ -30,6 +30,7 @@ Canvas.create_circle = _create_circle
 disc.create_circle(300, 300, 300, fill="white", outline="")
 
 disc.pack()
+
 #----Personalitzar el programa----
 
 root.title("Geometria Hiperbòlica")
@@ -72,13 +73,11 @@ def play_sound_fondo():
 		pygame.mixer.Channel(0).play(pygame.mixer.Sound("Sons\\Melodyloops-Season-of-joy.wav"))
 		time.sleep(38.0219)
 
-
 thread = Thread(target=play_sound_fondo)
 thread.start()
 
 def play_sound_botò():
 	pygame.mixer.Channel(1).play(pygame.mixer.Sound("Sons\\Botò.wav"))
-
 
 def play_sound_clic():
 	pygame.mixer.Channel(2).play(pygame.mixer.Sound("Sons\\Clic.wav"))
@@ -102,10 +101,10 @@ frases_castellà1=["RECTA", "SEMIRECTA", "SEGMENTO", "CIRCULO CON CENTRO", "ELIM
 frases_anglès1=["LINE", "RAY", "LINE SEGMENT", "CIRCLE  WITH CENTER",  "DELETE LINES", "INFORMATION", "How to use the program", "To use this program you have to click on the desired points of the disc and then click on the function you want to draw. The buttons will tell you how many points are needed and clicking on them without having marked enough points will not create any drawing but the in instruction window it will give you more detailed information on how to properly execute this function."]
 frases_alemà1=["LINIE", "STRAHL", "LINIENSEGMENT", "KREIS MIT ZENTRUM", "LINIEN LÖSCHEN", "INFORMATIONEN", "Wie man dieses Programm benutzt", "Um dieses Programm zu verwenden, müssen Sie auf die gewünschten Punkte der Disc und dann auf die Funktion klicken, die Sie zeichnen möchten. Die Schaltflächen geben an, wie viele Punkte benötigt werden, und klicken auf diese, ohne genügend Punkte markiert zu haben erstellt keine Zeichnung, aber im Anweisungsfenster erhalten Sie detailliertere Informationen zur ordnungsgemäßen Ausführung dieser Funktion."]
 
-frases_català2=["CERCLE PER 3 PUNTS","TRIANGLE","VALOR ABSOLUT", "QUADRILATER","ELIMINAR RESULTATS", "AGRAIMENTS", "Agraiments", "Voldria agrair tant als meus tutors d'aquest treball: Vanessa Florenza Royes (docent de Vedruna Balaguer), Roberto Rubio Nuñez (catedràtic de la UAB), al programa Argò, sense el qual no hauria conegut mai aquest tema ni a Roberto, i finalment a ma mare Mª Dolors Díaz Salud, tots ells per haber-me apoiat durant aquest tragecte. D'igual forma voldria donar gracies a Llum Ruiz Capdevila (docent de Vedruna Balaguer) qui ha ajudat a perfeccionar visualment aquest programa."]
-frases_castellà2=["CIRCULO POR 3 PUNTOS","TRIANGULO", "VALOR ABSOLUTO", "CUADRILATERO","ELIMINAR RESULTADOS", "ARADECIMIENTOS", "Agradecimientos", "Queria agrair tanto a mis tutores de este trabajo: Vanessa Florenza Royes (docente de Vedruna Balaguer), Roberto Rubio Nuñez (catedrático de la UAB), al programa Argò, sin el qual no habria conocido nunca este tema ni a Roberto, y finalmente a mi madre Mª Dolors Díaz Salud, todos ellos per haberme apoiado durante este trayecto. De igual forma querria dar gracias a Llum Ruiz Capdevila (docente de Vedruna Balaguer) quien ha ayudado a perfeccionar visualmente este programa."]
-frases_anglès2=["CIRCLE FOR 3 POINTS","TRIANGLE", "ABSOLUTE VALUE", "QUADRILATERAL", "DELETE RESULTS", "AGREEMENTS", "Agreements", "I would like to thank both my tutors of this work: Vanessa Florenza Royes (docent at Vedruna Balaguer), Roberto Rubio Nuñez (cathedratic at UAB), in the Argò program, without which I would never have known this topic or Roberto, and finally my mother Mª Dolors Díaz Salud, all of them for supporting me during this journey.  The same way I would want to thank Llum Ruiz Capdevila (docent at Vedruna Balaguer) who has helped to perfect this program visualy."]
-frases_alemà2=["KREIS DURCH 3 PUNKTE","DREIECK", "ABSOLUTWERK", "VIERECK", "ERGEBNISSE LÖSCHEN", "VEREINBARUNGEN", "Vereinbarungen", "Ich möchte Ich danke meinen beiden Tutoren für diese Arbeit: Vanessa Florenza Royes (Dozentin bei Vedruna Balaguer), Roberto Rubio Nuñez (Kathedratisch bei UAB), das Argò-Programm, ohne die ich dieses Thema oder Roberto nie gekannt hätte, und schließlich meine Mutter Mª Dolors Díaz Salud, alle, die mich auf dieser Reise unterstützt haben. Genauso möchte ich mich bei Llum Ruiz Capdevila (Dozentin bei Vedruna Balaguer) bedanken, die dazu beigetragen hat, dieses Programm visuell zu perfektionieren."]
+frases_català2=["CERCLE PER 3 PUNTS","TRIANGLE","VALOR ABSOLUT", "QUADRILATER","ELIMINAR RESULTATS", "AGRAIMENTS", "Agraiments", "Voldria agrair tant als meus tutors d'aquest treball: Vanessa Florenza Royes (docent de Vedruna Balaguer), Roberto Rubio Nuñez (investigador de la UAB), al programa Argò, sense el qual no hauria conegut mai aquest tema ni a Roberto, i finalment a ma mare Mª Dolors Díaz Salud, tots ells per haber-me apoiat durant aquest tragecte. D'igual forma voldria donar gracies a Llum Ruiz Capdevila (docent de Vedruna Balaguer) qui ha ajudat a perfeccionar visualment aquest programa."]
+frases_castellà2=["CIRCULO POR 3 PUNTOS","TRIANGULO", "VALOR ABSOLUTO", "CUADRILATERO","ELIMINAR RESULTADOS", "ARADECIMIENTOS", "Agradecimientos", "Queria agrair tanto a mis tutores de este trabajo: Vanessa Florenza Royes (docente de Vedruna Balaguer), Roberto Rubio Nuñez (investigador de la UAB), al programa Argò, sin el qual no habria conocido nunca este tema ni a Roberto, y finalmente a mi madre Mª Dolors Díaz Salud, todos ellos per haberme apoiado durante este trayecto. De igual forma querria dar gracias a Llum Ruiz Capdevila (docente de Vedruna Balaguer) quien ha ayudado a perfeccionar visualmente este programa."]
+frases_anglès2=["CIRCLE FOR 3 POINTS","TRIANGLE", "ABSOLUTE VALUE", "QUADRILATERAL", "DELETE RESULTS", "ACKNOWLEDGEMENTS", "ACKNOWLEDGEMENTS", "I would like to thank both my tutors of this work: Vanessa Florenza Royes (docent at Vedruna Balaguer), Roberto Rubio Nuñez (researcher at UAB), in the Argò program, without which I would never have known this topic or Roberto, and finally my mother Mª Dolors Díaz Salud, all of them for supporting me during this journey.  The same way I would want to thank Llum Ruiz Capdevila (docent at Vedruna Balaguer) who has helped to perfect this program visualy."]
+frases_alemà2=["KREIS DURCH 3 PUNKTE","DREIECK", "ABSOLUTWERK", "VIERECK", "ERGEBNISSE LÖSCHEN", "VEREINBARUNGEN", "Vereinbarungen", "Ich möchte Ich danke meinen beiden Tutoren für diese Arbeit: Vanessa Florenza Royes (Dozentin bei Vedruna Balaguer), Roberto Rubio Nuñez (Forscher bei UAB), das Argò-Programm, ohne die ich dieses Thema oder Roberto nie gekannt hätte, und schließlich meine Mutter Mª Dolors Díaz Salud, alle, die mich auf dieser Reise unterstützt haben. Genauso möchte ich mich bei Llum Ruiz Capdevila (Dozentin bei Vedruna Balaguer) bedanken, die dazu beigetragen hat, dieses Programm visuell zu perfektionieren."]
 
 frases=frases_català1[:]
 var1=StringVar()
@@ -413,7 +412,7 @@ def semirecta_h():
 		ele.destroy()
 	idioma_elegit=idioma.get()
 	if(idioma_elegit=="CATALÀ"):
-		info_semirecta=Label(root3, text='''Per usar la semiectarecta feu clic als dos punts del disc desitjats, sabent que la semirecta es dibuixara
+		info_semirecta=Label(root3, text='''Per usar la semirecta feu clic als dos punts del disc desitjats, sabent que la semirecta es dibuixara
  en sentit del primer al segon clic, i a continuació feu clic al botó de crear semirectes. ''')
 	elif(idioma_elegit=="ESPAÑOL"):
 		info_semirecta=Label(root3, text='''Para usar la semirecta haced clic a los dos puntos del disco deseados, sabiendo que la semirecta se dibujara
@@ -949,9 +948,9 @@ def distancia_h(print_d,cercle):
 	if(u1**2+u2**2<1 and v1**2+v2**2<1):
 		distancia_hiperbolica=math.log((math.sqrt((-u1*v2+u2*v1)**2+(1-u1*v1-u2*v2)**2)+math.sqrt((v1-u1)**2+(v2-u2)**2))/(math.sqrt((-u1*v2+u2*v1)**2+(1-u1*v1-u2*v2)**2)-math.sqrt((v1-u1)**2+(v2-u2)**2)))
 		if(cercle==True):
-			distancia=(escrit1+str(distancia_hiperbolica))
+			distancia=(escrit1+str(round(distancia_hiperbolica,3)))
 		else:
-			distancia=(escrit2+str(distancia_hiperbolica))
+			distancia=(escrit2+str(round(distancia_hiperbolica,3)))
 	else:
 		distancia_hiperbolica=math.inf
 		if(cercle==True):
@@ -959,7 +958,7 @@ def distancia_h(print_d,cercle):
 		else:
 			distancia=(escrit2+"∞")
 	if(print_d==True):
-		label_distancia=Label(root2,text=distancia, width=65)
+		label_distancia=Label(root2,text=distancia, width=40)
 		label_distancia.pack(expand=1)
 	return distancia_hiperbolica
 
@@ -1080,34 +1079,34 @@ def area_h(print_d):
 	area=math.pi-(A+B+C)
 	if(print_d==True):
 		if(area==math.pi):
-			area="π"
+			area=math.pi
 		else:
-			area=str(area)
+			area=area
 		idioma_elegit=idioma.get()
 		if(idioma_elegit=="CATALÀ"):
-			text_a="L'angule A és: "+str(A*180/math.pi)
-			text_b="L'angule B és: "+str(B*180/math.pi)
-			text_c="L'angule C és: "+str(C*180/math.pi)
-			text_d="L'àrea és: "+area
+			text_a="L'angule A és: "+str(round(A*180/math.pi,3))
+			text_b="L'angule B és: "+str(round(B*180/math.pi,3))
+			text_c="L'angule C és: "+str(round(C*180/math.pi,3))
+			text_d="L'àrea és: "+str(round(area,3))
 		elif(idioma_elegit=="ESPAÑOL"):
-			text_a="El angulo A es: "+str(A*180/math.pi)
-			text_b="El angulo B es: "+str(B*180/math.pi)
-			text_c="El angulo C es: "+str(C*180/math.pi)
-			text_d="El area es: "+area
+			text_a="El angulo A es: "+str(round(A*180/math.pi,3))
+			text_b="El angulo B es: "+str(round(B*180/math.pi,3))
+			text_c="El angulo C es: "+str(round(C*180/math.pi,3))
+			text_d="El area es: "+str(round(area,3))
 		elif(idioma_elegit=="ENGLISH"):
-			text_a="The angle A is: "+str(A*180/math.pi)
-			text_b="The angle B is: "+str(B*180/math.pi)
-			text_c="The angle C is: "+str(C*180/math.pi)
-			text_d="The area is: "+area
+			text_a="The angle A is: "+str(round(A*180/math.pi,3))
+			text_b="The angle B is: "+str(round(B*180/math.pi,3))
+			text_c="The angle C is: "+str(round(C*180/math.pi,3))
+			text_d="The area is: "+str(round(area,3))
 		elif(idioma_elegit=="DEUTSCH"):
-			text_a="Der Winkel A ist: "+str(A*180/math.pi)
-			text_b="Der Winkel B ist: "+str(B*180/math.pi)
-			text_c="Der Winkel C ist: "+str(C*180/math.pi)
-			text_d="Das Gebiet ist: "+area
-		label_angle_a=Label(root2, text=text_a, width=65)
-		label_angle_b=Label(root2, text=text_b, width=65)
-		label_angle_c=Label(root2, text=text_c, width=65)
-		label_area=Label(root2, text=text_d, width=65)
+			text_a="Der Winkel A ist: "+str(round(A*180/math.pi,3))
+			text_b="Der Winkel B ist: "+str(round(B*180/math.pi,3))
+			text_c="Der Winkel C ist: "+str(round(C*180/math.pi,3))
+			text_d="Das Gebiet ist: "+str(round(area,3))
+		label_angle_a=Label(root2, text=text_a, width=40)
+		label_angle_b=Label(root2, text=text_b, width=40)
+		label_angle_c=Label(root2, text=text_c, width=40)
+		label_area=Label(root2, text=text_d, width=40)
 		label_angle_a.pack(expand=1)
 		label_angle_b.pack(expand=1)
 		label_angle_c.pack(expand=1)
@@ -1172,14 +1171,14 @@ def perimetre_cercle():
 	if(perimetre==math.inf):
 		perimetre="∞"
 	if(idioma_elegit=="CATALÀ"):
-		text_peri="El perimetre és: "+str(perimetre)
+		text_peri="El perimetre és: "+str(round(perimetre,3))
 	elif(idioma_elegit=="ESPAÑOL"):
-		text_peri="El perimetro es: "+str(perimetre)
+		text_peri="El perimetro es: "+str(round(perimetre,3))
 	elif(idioma_elegit=="ENGLISH"):
-		text_peri="The circumference is: "+str(perimetre)
+		text_peri="The circumference is: "+str(round(perimetre,3))
 	elif(idioma_elegit=="DEUTSCH"):
-		text_peri="Der Umfang ist: "+str(perimetre)
-	label_peri=Label(root2, text=text_peri, width=65)
+		text_peri="Der Umfang ist: "+str(round(perimetre,3))
+	label_peri=Label(root2, text=text_peri, width=40)
 	label_peri.pack(expand=1)
 
 def area_cercle():
@@ -1188,14 +1187,14 @@ def area_cercle():
 	if(area==math.inf):
 		area="∞"
 	if(idioma_elegit=="CATALÀ"):
-		text_a_c="L'àrea és: "+str(area)
+		text_a_c="L'àrea és: "+str(round(area,3))
 	elif(idioma_elegit=="ESPAÑOL"):
-		text_a_c="El area es: "+str(area)
+		text_a_c="El area es: "+str(round(area,3))
 	elif(idioma_elegit=="ENGLISH"):
- 		text_a_c="The area is: "+str(area)
+ 		text_a_c="The area is: "+str(round(area,3))
 	elif(idioma_elegit=="DEUTSCH"):
- 		text_a_c="Das Gebiet ist: "+str(area)
-	label_a_c=Label(root2, text=text_a_c, width=65)
+ 		text_a_c="Das Gebiet ist: "+str(round(area,3))
+	label_a_c=Label(root2, text=text_a_c, width=40)
 	label_a_c.pack(expand=1)
 
 def cercle_h_full():
@@ -1268,16 +1267,16 @@ def abs_x():
 		ele.destroy()
 	idioma_elegit=idioma.get()
 	if(idioma_elegit=="CATALÀ"):
-		info_recta=Label(root3, text='''Per usar la recta en valor absolut feu clic als dos punts del disc desitjats
+		info_recta=Label(root3, text='''Per usar la funció y=|x| feu clic als dos punts del disc desitjats
  i a continuació feu clic al botó de crear rectes en valor absolut.''')
 	elif(idioma_elegit=="ESPAÑOL"):
-		info_recta=Label(root3, text='''Para usar la recta en valor absoluto haced clic a los dos puntos del disco deseados
+		info_recta=Label(root3, text='''Para usar la función y=|x| haced clic a los dos puntos del disco deseados
  y a continuación haced clic al botón de crear rectas en valor absoluto.''')
 	elif(idioma_elegit=="ENGLISH"):
-		info_recta=Label(root3, text='''To use the line in absolute value do click at the two desired points of the disk
+		info_recta=Label(root3, text='''To use the function y=|x| do click at the two desired points of the disk
  and then click the button to create lines in absolute value.''')
 	elif(idioma_elegit=="DEUTSCH"):
-		info_recta=Label(root3, text='''Um die Linie in absoluten Wert zu verwenden, klicken Sie auf die beiden gewünschten Punkte der Scheibe
+		info_recta=Label(root3, text='''Verwendung der Funktion y=|x|, klicken Sie auf die beiden gewünschten Punkte der Scheibe
  Klicken Sie dann auf die Schaltfläche, um Linien in absoluten Werten zu erstellen.''')
 	info_recta.pack()
 	if(root.counter==2):
@@ -1448,28 +1447,28 @@ def quadrat_h_full():
 		area_t=str(area_t)
 	idioma_elegit=idioma.get()
 	if(idioma_elegit=="CATALÀ"):
-		text_a="L'angule A és: "+str(A*180/math.pi)
-		text_b="L'angule B és: "+str(B*180/math.pi)
-		text_c="L'angule C és: "+str(C*180/math.pi)
-		text_d="L'angule D és: "+str(D*180/math.pi)
-		text_e="L'àrea és: "+area_t
+		text_a="L'angule A és: "+str(round(A*180/math.pi,3))
+		text_b="L'angule B és: "+str(round(B*180/math.pi,3))
+		text_c="L'angule C és: "+str(round(C*180/math.pi,3))
+		text_d="L'angule D és: "+str(round(D*180/math.pi,3))
+		text_e="L'àrea és: "+round(area_t,3)
 	elif(idioma_elegit=="ESPAÑOL"):
-		text_a="El angulo A es: "+str(A*180/math.pi)
-		text_b="El angulo B es: "+str(B*180/math.pi)
-		text_c="El angulo C es: "+str(C*180/math.pi)
-		text_d="El angulo D es: "+str(D*180/math.pi)
-		text_e="El area es: "+area_t
+		text_a="El angulo A es: "+str(round(A*180/math.pi,3))
+		text_b="El angulo B es: "+str(round(B*180/math.pi,3))
+		text_c="El angulo C es: "+str(round(C*180/math.pi,3))
+		text_d="El angulo D es: "+str(round(D*180/math.pi,3))
+		text_e="El area es: "+round(area_t,3)
 	elif(idioma_elegit=="DEUTSCH"):
-		text_a="The angle A is: "+str(A*180/math.pi)
-		text_b="The angle B is: "+str(B*180/math.pi)
-		text_c="The angle C is: "+str(C*180/math.pi)
-		text_d="The angle D is: "+str(D*180/math.pi)
-		text_e="The area is: "+area_t
-	label_angle_a=Label(root2, text=text_a, width=65)
-	label_angle_b=Label(root2, text=text_b, width=65)
-	label_angle_c=Label(root2, text=text_c, width=65)
-	label_angle_d=Label(root2, text=text_d, width=65)
-	label_area=Label(root2, text=text_e, width=65)
+		text_a="The angle A is: "+str(round(A*180/math.pi,3))
+		text_b="The angle B is: "+str(round(B*180/math.pi,3))
+		text_c="The angle C is: "+str(round(C*180/math.pi,3))
+		text_d="The angle D is: "+str(round(D*180/math.pi,3))
+		text_e="The area is: "+round(area_t,3)
+	label_angle_a=Label(root2, text=text_a, width=40)
+	label_angle_b=Label(root2, text=text_b, width=40)
+	label_angle_c=Label(root2, text=text_c, width=40)
+	label_angle_d=Label(root2, text=text_d, width=40)
+	label_area=Label(root2, text=text_e, width=40)
 	label_angle_a.pack(expand=1)
 	label_angle_b.pack(expand=1)
 	label_angle_c.pack(expand=1)
@@ -1538,13 +1537,13 @@ def click(event):
 	angle_h()
 	idioma_elegit=idioma.get()
 	if(idioma_elegit=="CATALÀ"):
-		coordenades_polars_h=Label(root2, text="Les coordenades polars del punt són: ("+str(radi)+","+str(root.angle)+"°)", width=65)
+		coordenades_polars_h=Label(root2, text="Les coordenades polars del punt són: ("+str(round(radi,3))+","+str(round(root.angle,3))+"°)", width=40)
 	elif(idioma_elegit=="ESPAÑOL"):
-		coordenades_polars_h=Label(root2, text="Las coordenadas polares del punto son: ("+str(radi)+","+str(root.angle)+"°)", width=65)
+		coordenades_polars_h=Label(root2, text="Las coordenadas polares del punto son: ("+str(round(radi,3))+","+str(round(root.angle,3))+"°)", width=40)
 	elif(idioma_elegit=="ENGLISH"):
-		coordenades_polars_h=Label(root2, text="The polar coordinates of the point are: ("+str(radi)+","+str(root.angle)+"°)", width=65)
+		coordenades_polars_h=Label(root2, text="The polar coordinates of the point are: ("+str(round(radi,3))+","+str(round(root.angle,3))+"°)", width=40)
 	elif(idioma_elegit=="DEUTSCH"):
-		coordenades_polars_h=Label(root2, text="Die Polarkoordinaten des Punktes sind: ("+str(radi)+","+str(root.angle)+"°)", width=65)
+		coordenades_polars_h=Label(root2, text="Die Polarkoordinaten des Punktes sind: ("+str(round(radi,3))+","+str(round(root.angle,3))+"°)", width=40)
 	coordenades_polars_h.pack(expand=1)
 
 disc.bind("<Button-1>", click)

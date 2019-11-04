@@ -1084,32 +1084,44 @@ def area_h(print_d):
 			area=area
 		idioma_elegit=idioma.get()
 		if(idioma_elegit=="CATALÀ"):
+			text_f="El perimetre és: "+str(round(a+b+c,3))
 			text_a="L'angule A és: "+str(round(A*180/math.pi,3))
 			text_b="L'angule B és: "+str(round(B*180/math.pi,3))
 			text_c="L'angule C és: "+str(round(C*180/math.pi,3))
+			text_e="La suma dels seus angles és: "+str(round(A*180/math.pi+B*180/math.pi+C*180/math.pi,3))
 			text_d="L'àrea és: "+str(round(area,3))
 		elif(idioma_elegit=="ESPAÑOL"):
+			text_f="El perimetro es: "+str(round(a+b+c,3))
 			text_a="El angulo A es: "+str(round(A*180/math.pi,3))
 			text_b="El angulo B es: "+str(round(B*180/math.pi,3))
 			text_c="El angulo C es: "+str(round(C*180/math.pi,3))
+			text_e="La suma de sus angulos es: "+str(round(A*180/math.pi+B*180/math.pi+C*180/math.pi,3))
 			text_d="El area es: "+str(round(area,3))
 		elif(idioma_elegit=="ENGLISH"):
+			text_f="The perimeter is: "+str(round(a+b+c,3))
 			text_a="The angle A is: "+str(round(A*180/math.pi,3))
 			text_b="The angle B is: "+str(round(B*180/math.pi,3))
 			text_c="The angle C is: "+str(round(C*180/math.pi,3))
+			text_e="The sum of it's angles is: "+str(round(A*180/math.pi+B*180/math.pi+C*180/math.pi,3))
 			text_d="The area is: "+str(round(area,3))
 		elif(idioma_elegit=="DEUTSCH"):
+			text_f="Der Umfang ist: "+str(round(a+b+c,3))
 			text_a="Der Winkel A ist: "+str(round(A*180/math.pi,3))
 			text_b="Der Winkel B ist: "+str(round(B*180/math.pi,3))
 			text_c="Der Winkel C ist: "+str(round(C*180/math.pi,3))
+			text_e="Die Summe seiner Winkel ist: "+str(round(A*180/math.pi+B*180/math.pi+C*180/math.pi,3))
 			text_d="Das Gebiet ist: "+str(round(area,3))
+		label_perimetre=Label(root2, text=text_f, width=40)
 		label_angle_a=Label(root2, text=text_a, width=40)
 		label_angle_b=Label(root2, text=text_b, width=40)
 		label_angle_c=Label(root2, text=text_c, width=40)
+		label_angle_total=Label(root2, text=text_e, width=40)
 		label_area=Label(root2, text=text_d, width=40)
+		label_perimetre.pack(expand=1)
 		label_angle_a.pack(expand=1)
 		label_angle_b.pack(expand=1)
 		label_angle_c.pack(expand=1)
+		label_angle_total.pack(expand=1)
 		label_area.pack(expand=1)
 	else:
 		root.area,root.a,root.b,root.c=area,A,B,C
@@ -1168,32 +1180,48 @@ def segment_h_full():
 def perimetre_cercle():
 	perimetre=2*math.pi*math.sinh(distancia_h(False,True))
 	idioma_elegit=idioma.get()
-	if(perimetre==math.inf):
-		perimetre="∞"
-	if(idioma_elegit=="CATALÀ"):
-		text_peri="El perimetre és: "+str(round(perimetre,3))
-	elif(idioma_elegit=="ESPAÑOL"):
-		text_peri="El perimetro es: "+str(round(perimetre,3))
-	elif(idioma_elegit=="ENGLISH"):
-		text_peri="The circumference is: "+str(round(perimetre,3))
-	elif(idioma_elegit=="DEUTSCH"):
-		text_peri="Der Umfang ist: "+str(round(perimetre,3))
+	if(perimetre!=math.inf):
+		if(idioma_elegit=="CATALÀ"):
+			text_peri="El perimetre és: "+str(round(perimetre,3))
+		elif(idioma_elegit=="ESPAÑOL"):
+			text_peri="El perimetro es: "+str(round(perimetre,3))
+		elif(idioma_elegit=="ENGLISH"):
+			text_peri="The circumference is: "+str(round(perimetre,3))
+		elif(idioma_elegit=="DEUTSCH"):
+			text_peri="Der Umfang ist: "+str(round(perimetre,3))
+	elif(perimetre==math.inf):
+		if(idioma_elegit=="CATALÀ"):
+			text_peri="El perimetre és: ∞"
+		elif(idioma_elegit=="ESPAÑOL"):
+			text_peri="El perimetro es: ∞"
+		elif(idioma_elegit=="ENGLISH"):
+			text_peri="The circumference is: ∞"
+		elif(idioma_elegit=="DEUTSCH"):
+			text_peri="Der Umfang ist: ∞"
 	label_peri=Label(root2, text=text_peri, width=40)
 	label_peri.pack(expand=1)
 
 def area_cercle():
 	area=2*math.pi*(math.cosh(distancia_h(False,True))-1)
 	idioma_elegit=idioma.get()
-	if(area==math.inf):
-		area="∞"
-	if(idioma_elegit=="CATALÀ"):
-		text_a_c="L'àrea és: "+str(round(area,3))
-	elif(idioma_elegit=="ESPAÑOL"):
-		text_a_c="El area es: "+str(round(area,3))
-	elif(idioma_elegit=="ENGLISH"):
- 		text_a_c="The area is: "+str(round(area,3))
-	elif(idioma_elegit=="DEUTSCH"):
- 		text_a_c="Das Gebiet ist: "+str(round(area,3))
+	if(area!=math.inf):
+		if(idioma_elegit=="CATALÀ"):
+			text_a_c="L'àrea és: "+str(round(area,3))
+		elif(idioma_elegit=="ESPAÑOL"):
+			text_a_c="El area es: "+str(round(area,3))
+		elif(idioma_elegit=="ENGLISH"):
+	 		text_a_c="The area is: "+str(round(area,3))
+		elif(idioma_elegit=="DEUTSCH"):
+	 		text_a_c="Das Gebiet ist: "+str(round(area,3))
+	elif(area==math.inf):
+		if(idioma_elegit=="CATALÀ"):
+			text_a_c="L'àrea és: ∞"
+		elif(idioma_elegit=="ESPAÑOL"):
+			text_a_c="El area es: ∞"
+		elif(idioma_elegit=="ENGLISH"):
+	 		text_a_c="The area is: ∞"
+		elif(idioma_elegit=="DEUTSCH"):
+	 		text_a_c="Das Gebiet ist: ∞"
 	label_a_c=Label(root2, text=text_a_c, width=40)
 	label_a_c.pack(expand=1)
 
@@ -1487,15 +1515,16 @@ def angle_h():
 		u1,u2=root.y1,root.y2
 	u1-=300
 	u2=300-u2
-	u1/=300
-	u2/=300
 	try:
-		tan_alpha=math.tan(u2/u1)
-		alpha=math.atan(tan_alpha)
+		alpha=math.fabs(math.atan(u2/u1)*180/math.pi)
 	except:
-		alpha=math.pi/2
-	if(u2<0):
-		alpha+=math.pi
+		alpha=90
+	if(u1<0 and u2>0):
+		alpha=180-alpha
+	elif(u1<=0 and u2<0):
+		alpha+=180
+	elif(u1>0 and u2<0):
+		alpha=360-alpha
 	root.angle=alpha
 
 def click(event):
@@ -1532,19 +1561,46 @@ def click(event):
 		root.counter=0
 	if(root.counter2==12):
 		root.counter2=0
+	disc.create_circle(x,y,3,outline='lightgreen', fill='cyan')
 	delta=2*((x/300-1)**2+(1-y/300)**2)/(1-((x/300-1)**2+(1-y/300)**2))
-	radi=math.acosh(1+delta)
-	angle_h()
-	idioma_elegit=idioma.get()
-	if(idioma_elegit=="CATALÀ"):
-		coordenades_polars_h=Label(root2, text="Les coordenades polars del punt són: ("+str(round(radi,3))+","+str(round(root.angle,3))+"°)", width=40)
-	elif(idioma_elegit=="ESPAÑOL"):
-		coordenades_polars_h=Label(root2, text="Las coordenadas polares del punto son: ("+str(round(radi,3))+","+str(round(root.angle,3))+"°)", width=40)
-	elif(idioma_elegit=="ENGLISH"):
-		coordenades_polars_h=Label(root2, text="The polar coordinates of the point are: ("+str(round(radi,3))+","+str(round(root.angle,3))+"°)", width=40)
-	elif(idioma_elegit=="DEUTSCH"):
-		coordenades_polars_h=Label(root2, text="Die Polarkoordinaten des Punktes sind: ("+str(round(radi,3))+","+str(round(root.angle,3))+"°)", width=40)
+	try:
+		radi=math.acosh(1+delta)
+		angle_h()
+		coordenada_x=math.atanh(math.tanh(radi)*math.cos(root.angle*math.pi/180))
+		coordenada_y=math.atanh(math.tanh(radi)*math.sin(root.angle*math.pi/180))
+		idioma_elegit=idioma.get()
+		if(idioma_elegit=="CATALÀ"):
+			coordenades_polars_h=Label(root2, text="Les coordenades polars del punt són: ("+str(round(radi,3))+","+str(round(root.angle,3))+"°)", width=40)
+			coordenades_axials_h=Label(root2, text="Les coordenades axials del punt són: ("+str(round(coordenada_x,3))+","+str(round(coordenada_y,3))+")", width=40)
+		elif(idioma_elegit=="ESPAÑOL"):
+			coordenades_polars_h=Label(root2, text="Las coordenadas polares del punto son: ("+str(round(radi,3))+","+str(round(root.angle,3))+"°)", width=40)
+			coordenades_axials_h=Label(root2, text="Las coordenadas axiales del punto son: ("+str(round(coordenada_x,3))+","+str(round(coordenada_y,3))+")", width=40)
+		elif(idioma_elegit=="ENGLISH"):
+			coordenades_polars_h=Label(root2, text="The polar coordinates of the point are: ("+str(round(radi,3))+","+str(round(root.angle,3))+"°)", width=40)
+			coordenades_axials_h=Label(root2, text="The axial coordinates of the point are: ("+str(round(coordenada_x,3))+","+str(round(coordenada_y,3))+")", width=40)
+		elif(idioma_elegit=="DEUTSCH"):
+			coordenades_polars_h=Label(root2, text="Die Polarkoordinaten des Punktes sind: ("+str(round(radi,3))+","+str(round(root.angle,3))+"°)", width=40)
+			coordenades_axials_h=Label(root2, text="Die axiale Koordinaten des Punktes sind: ("+str(round(coordenada_x,3))+","+str(round(coordenada_y,3))+")", width=40)
+	except:
+		radi=math.inf
+		angle_h()
+		coordenada_x=math.atanh(math.tanh(radi)*math.cos(root.angle*math.pi/180))
+		coordenada_y=math.atanh(math.tanh(radi)*math.sin(root.angle*math.pi/180))
+		idioma_elegit=idioma.get()
+		if(idioma_elegit=="CATALÀ"):
+			coordenades_polars_h=Label(root2, text="Les coordenades polars del punt són: (∞,"+str(round(root.angle,3))+"°)", width=40)
+			coordenades_axials_h=Label(root2, text="Les coordenades axials del punt són: ("+str(round(coordenada_x,3))+","+str(round(coordenada_y,3))+")", width=40)
+		elif(idioma_elegit=="ESPAÑOL"):
+			coordenades_polars_h=Label(root2, text="Las coordenadas polares del punto son: (∞,"+str(round(root.angle,3))+"°)", width=40)
+			coordenades_axials_h=Label(root2, text="Las coordenadas axiales del punto son: ("+str(round(coordenada_x,3))+","+str(round(coordenada_y,3))+")", width=40)
+		elif(idioma_elegit=="ENGLISH"):
+			coordenades_polars_h=Label(root2, text="The polar coordinates of the point are: (∞,"+str(round(root.angle,3))+"°)", width=40)
+			coordenades_axials_h=Label(root2, text="The axial coordinates of the point are: ("+str(round(coordenada_x,3))+","+str(round(coordenada_y,3))+")", width=40)
+		elif(idioma_elegit=="DEUTSCH"):
+			coordenades_polars_h=Label(root2, text="Die Polarkoordinaten des Punktes sind: (∞,"+str(round(root.angle,3))+"°)", width=40)
+			coordenades_axials_h=Label(root2, text="Die axiale Koordinaten des Punktes sind: ("+str(round(coordenada_x,3))+","+str(round(coordenada_y,3))+")", width=40)
 	coordenades_polars_h.pack(expand=1)
+	coordenades_axials_h.pack(expand=1)
 
 disc.bind("<Button-1>", click)
 

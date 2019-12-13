@@ -405,7 +405,7 @@ def recta_h():
 		vector_y=v2-u2
 		x1=v1+1000000*vector_x
 		y1=v2+1000000*vector_y
-		disc.create_line(x1+300,300-y1,300-x1,300+y1)
+		disc.create_line(x1+300,300-y1,300-x1,300+y1, fill="lime")
 
 def semirecta_h():
 	for ele in root3.winfo_children():
@@ -554,7 +554,7 @@ def semirecta_h():
 		vector_y=v2-u2
 		x1=v1+1000000*vector_x
 		y1=v2+1000000*vector_y
-		disc.create_line(x1+300,300-y1,u1+300,300-u2)
+		disc.create_line(x1+300,300-y1,u1+300,300-u2,fill="lime")
 		
 def segment_h():
 	if(root.false==False):
@@ -690,7 +690,7 @@ def segment_h():
 		disc.create_arc(k+300-r_segment, -l+300-r_segment, k+300+r_segment, -l+300+r_segment, start=angle_inicial*180/math.pi, extent=gamma*180/math.pi, fill="", outline="black", style="arc")
 
 	else:
-		disc.create_line(u1,u2,v1,v2)
+		disc.create_line(u1,u2,v1,v2,fill="lime")
 
 def cercle_h():
 	for ele in root3.winfo_children():
@@ -724,7 +724,11 @@ def cercle_h():
 	v1-=300
 	v2=300-v2
 	if(v1**2+v2**2==90000):
-		disc.create_circle(300, 300, 300, outline="blue")
+		disc.create_circle(300, 300, 300, outline="orange")
+	elif(u1**2+u2**2==0):
+		s,t=u1,u2
+		r_cercle=math.sqrt(v1**2+v2**2)
+		disc.create_circle(s+300,300-t,r_cercle, outline="lime")
 	else:
 		p1,p2=0,300
 		if((p1-300)*(300-u2)-(300-p2)*(u1-300)!=0):
@@ -795,10 +799,8 @@ def cercle_h():
 		r_cercle=math.sqrt(O**2+P**2-4*Q)/2
 		if(v1**2+v2**2>90000):
 			disc.create_circle(s+300,300-t,r_cercle,outline="red")
-		elif(u1==0 and u2==0):
-			s,t=u1,u2
-			r_cercle=math.sqrt(v1**2+v2**2)
-			disc.create_circle(s+300,300-t,r_cercle, outline="blue")
+		elif(u1**2+u2**2>=89400 and u1**2+u2**2<=90500):
+			disc.create_circle(s+300,300-t,r_cercle,outline="orange")
 		else:
 			disc.create_circle(s+300,300-t,r_cercle,outline="blue")
 
@@ -831,21 +833,21 @@ def cercle_2_h():
 	disc.create_circle(v1,v2,5,outline='blue', fill='#00EEFF')
 	disc.create_circle(w1,w2,5,outline='blue', fill='#00EEFF')
 	if((w1-v1==0 and u1==v1) or (w2-v2==0 and u2==v2)):
-		u1-=300
-		u2=300-u2
-		v1-=300
-		v2=300-v2
 		vector_x=v1-u1
 		vector_y=v2-u2
 		x1=v1+1000000*vector_x
 		y1=v2+1000000*vector_y
-		disc.create_line(x1+300,300-y1,300-x1,300+y1,fill="red")
+		x2=v1-1000000*vector_x
+		y2=v2-1000000*vector_y
+		disc.create_line(x1,y1,x2,y2,fill="yellow")
 	elif((v1-u1)/(w1-v1)==(v2-u2)/(w2-v2)):
 		vector_x=v1-u1
 		vector_y=v2-u2
 		x1=v1+1000000*vector_x
 		y1=v2+1000000*vector_y
-		disc.create_line(x1,y1,-x1,-y1,fill="red")
+		x2=v1-1000000*vector_x
+		y2=v2-1000000*vector_y
+		disc.create_line(x1,y1,x2,y2,fill="yellow")
 	else:
 		u1-=300
 		u2=300-u2
@@ -932,15 +934,13 @@ def distancia_h(print_d,cercle):
 	v1=(v1-300)/300
 	v2=(300-v2)/300
 	if(v1==0 and v2==0):
-		delta=2*(u1**2+u2**2)/(1-(u1**2+u2**2))
-		distancia_hiperbolica=math.acosh(1+delta)
+		distancia_hiperbolica=2*math.atanh(math.sqrt(u1**2+u2**2))
 		if(cercle==True):
 			distancia=(escrit1+str(distancia_hiperbolica))
 		else:
 			distancia=(escrit2+str(distancia_hiperbolica))
 	elif(u1==0 and u2==0):
-		delta=2*(v1**2+v2**2)/(1-(v1**2+v2**2))
-		distancia_hiperbolica=math.acosh(1+delta)
+		distancia_hiperbolica=2*math.atanh(math.sqrt(v1**2+v2**2))
 		if(cercle==True):
 			distancia=(escrit1+str(distancia_hiperbolica))
 		else:

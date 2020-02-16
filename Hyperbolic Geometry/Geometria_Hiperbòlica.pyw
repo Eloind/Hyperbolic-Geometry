@@ -1417,13 +1417,13 @@ def quadrat_h():
 		ele.destroy()
 	idioma_elegit=idioma.get()
 	if(idioma_elegit=="CATALÀ"):
-		info_recta=Label(root3, text="Per usar el quadrilàter feu clic als 4 punts del disc desitjats i a continuació feu clic al botó de crear quadrilàters.")
+		info_recta=Label(root3, text="Per usar el quadrilàter feu clic als 4 punts del disc desitjats en sentit horari o antihorari i a continuació feu clic al botó de crear quadrilàters.")
 	elif(idioma_elegit=="ESPAÑOL"):
-		info_recta=Label(root3, text="Para usar el cuadrilátero haced clic a los 4 puntos del disco deseados y a continuación haced clic al botón de crear cuadriláteros.")
+		info_recta=Label(root3, text="Para usar el cuadrilátero haced clic a los 4 puntos del disco deseados en sentido horario o antihorario y a continuación haced clic al botón de crear cuadriláteros.")
 	elif(idioma_elegit=="ENGLISH"):
-		info_recta=Label(root3, text="To use the quadrilateral do click at the 4 desired points of the disk and then click the button to create quadrilaterals.")
+		info_recta=Label(root3, text="To use the quadrilateral do click at the 4 desired points of the disk clockwise or counterclockwise and then click the button to create quadrilaterals.")
 	elif(idioma_elegit=="DEUTSCH"):
-		info_recta=Label(root3, text="Um das Viereck zu verwenden, klicken Sie auf die 4 gewünschten Punkte der Scheibe und dann auf die Schaltfläche, um Vierecke zu erstellen.")
+		info_recta=Label(root3, text="Um das Viereck zu verwenden, klicken Sie auf die 4 gewünschten Punkte der Scheibe im oder gegen den uhrzeigersinn und dann auf die Schaltfläche, um Vierecke zu erstellen.")
 	info_recta.pack()
 	u1,u2,v1,v2,w1,w2,y1,y2=root.u1,root.u2,root.v1,root.v2,root.w1,root.w2,root.y1,root.y2
 	root.false=False
@@ -1444,13 +1444,13 @@ def quadrat_h_full():
 		ele.destroy()
 	idioma_elegit=idioma.get()
 	if(idioma_elegit=="CATALÀ"):
-		info_recta=Label(root3, text="Per usar el quadrilàter feu clic als 4 punts del disc desitjats i a continuació feu clic al botó de crear quadrilàters.")
+		info_recta=Label(root3, text="Per usar el quadrilàter feu clic als 4 punts del disc desitjats en sentit horari o antihorari i a continuació feu clic al botó de crear quadrilàters.")
 	elif(idioma_elegit=="ESPAÑOL"):
-		info_recta=Label(root3, text="Para usar el cuadrilátero haced clic a los 4 puntos del disco deseados y a continuación haced clic al botón de crear quadriláteros.")
+		info_recta=Label(root3, text="Para usar el cuadrilátero haced clic a los 4 puntos del disco deseados en sentido horario o antihorario y a continuación haced clic al botón de crear quadriláteros.")
 	elif(idioma_elegit=="ENGLISH"):
-		info_recta=Label(root3, text="To use the quadrilateral do click at the 4 desired points of the disk and then click the button to create quadrilaterals.")
+		info_recta=Label(root3, text="To use the quadrilateral do click at the 4 desired points of the disk clockwise or counterclockwise and then click the button to create quadrilaterals.")
 	elif(idioma_elegit=="DEUTSCH"):
-		info_recta=Label(root3, text="Um das Viereck zu verwenden, klicken Sie auf die 4 gewünschten Punkte der Scheibe und dann auf die Schaltfläche, um Vierecke zu erstellen.")
+		info_recta=Label(root3, text="Um das Viereck zu verwenden, klicken Sie auf die 4 gewünschten Punkte der Scheibe im oder gegen den uhrzeigersinn und dann auf die Schaltfläche, um Vierecke zu erstellen.")
 	info_recta.pack()
 	root.false2=False
 	root2.u1,root2.u2,root2.v1,root2.v2=root.u1,root.u2,root.v1,root.v2

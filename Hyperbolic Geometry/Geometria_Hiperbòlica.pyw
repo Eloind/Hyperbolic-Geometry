@@ -1265,6 +1265,16 @@ def cercle_h_full():
 def eliminar():
 	disc.delete("all")
 	disc.create_circle(300, 300, 300, fill="white", outline="")
+	root.counter=0
+	root.counter2=0
+	if(root.counter3==1):
+		del root.u1, root.u2
+	elif(root.counter3==2):
+		del root.u1, root.u2, root.v1, root.v2
+	elif(root.counter3==3):
+		del root.u1, root.u2, root.v1, root.v2, root.w1, root.w2
+	elif(root.counter3>3):
+		del root.u1, root.u2, root.v1, root.v2, root.w1, root.w2, root.y1, root.y2
 	root.counter3=0
 
 def info():

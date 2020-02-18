@@ -834,6 +834,12 @@ def cercle_2_h():
 	disc.create_circle(u1,u2,5,outline='blue', fill='#00EEFF')
 	disc.create_circle(v1,v2,5,outline='blue', fill='#00EEFF')
 	disc.create_circle(w1,w2,5,outline='blue', fill='#00EEFF')
+	root2.u1,root2.u2,root2.v1,root2.v2=u1,u2,v1,v2
+	d_a=distancia_h(False,False)
+	root2.u1,root2.u2,root2.v1,root2.v2=v1,v2,w1,w2
+	d_b=distancia_h(False,False)
+	root2.u1,root2.u2,root2.v1,root2.v2=w1,w2,u1,u2
+	d_c=distancia_h(False,False)
 	if((w1-v1==0 and u1==v1) or (w2-v2==0 and u2==v2)):
 		vector_x=v1-u1
 		vector_y=v2-u2
@@ -868,6 +874,10 @@ def cercle_2_h():
 		r_cercle=math.sqrt(A**2+B**2-4*C)/2
 		if(math.sqrt(l**2+k**2)+r_cercle>300):
 			disc.create_circle(l+300,300-k,r_cercle,outline="red")
+		elif(d_a+d_b==d_c or d_a+d_c==d_b or d_c+d_b==d_a):
+			disc.create_circle(l+300,300-k,r_cercle,outline="black")
+		elif(math.sqrt(l**2+k**2)==r_cercle+300 or math.sqrt(l**2+k**2)==math.fabs(r_cercle-300)):
+			disc.create_circle(l+300,300-k,r_cercle,outline="orange")
 		else:
 			disc.create_circle(l+300,300-k,r_cercle,outline="blue")
 
